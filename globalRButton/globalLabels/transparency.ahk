@@ -1,39 +1,46 @@
 TransparencyToggle:
-  if (StrLen(mouseCursor_Title) > 0 and mouseCursor_Title != "Program Manager") {
-    WinGet, CurTransparency, Transparent, ahk_id %mouseCursor_Id%
-    if (CurTransparency == "") {
-      CurTransparency := 255
-    }
-    if (CurTransparency > 0 && CurTransparency < 255) {
-      WinSet, Transparent, 255, ahk_id %mouseCursor_Id%
-      tooltip 已取消透明化：%mouseCursor_Title%
+  if (Flag_RightUpCancel == 0) {
+    if (StrLen(mouseCursor_Title) > 0 and mouseCursor_Title != "Program Manager") {
+      WinGet, CurTransparency, Transparent, ahk_id %mouseCursor_Id%
+      if (CurTransparency == "") {
+        CurTransparency := 255
+      }
+      if (CurTransparency > 0 && CurTransparency < 255) {
+        WinSet, Transparent, 255, ahk_id %mouseCursor_Id%
+        tooltip 已取消透明化：%mouseCursor_Title%
+      } else {
+        WinSet, Transparent, 200, ahk_id %mouseCursor_Id%
+        tooltip 已透明化：%mouseCursor_Title%
+      }
     } else {
-      WinSet, Transparent, 200, ahk_id %mouseCursor_Id%
-      tooltip 已透明化：%mouseCursor_Title%
+      Send, {Esc}
+      tooltip, %mouseCursor_Title%
     }
   } else {
     Send, {Esc}
-    tooltip, %mouseCursor_Title%
+    tooltip
   }
 Return
 
 TransparencyToggleMsg:
-  if (StrLen(msg) > 0) {
-    msg .= "`n"
-  }
-  if (StrLen(mouseCursor_Title) > 0 and mouseCursor_Title != "Program Manager") {
-    WinGet, CurTransparency, Transparent, ahk_id %mouseCursor_Id%
-    if (CurTransparency == "") {
-      CurTransparency := 255
+  if (Flag_RightUpCancel == 0) {
+    if (StrLen(msg) > 0) {
+      msg .= "`n"
     }
-    if (CurTransparency > 0 && CurTransparency < 255) {
-      msg .= "不透明化："
-      msg .= mouseCursor_Title
+    if (StrLen(mouseCursor_Title) > 0 and mouseCursor_Title != "Program Manager") {
+      WinGet, CurTransparency, Transparent, ahk_id %mouseCursor_Id%
+      if (CurTransparency == "") {
+        CurTransparency := 255
+      }
+      if (CurTransparency > 0 && CurTransparency < 255) {
+        msg .= "不透明化："
+        msg .= mouseCursor_Title
+      } else {
+        msg .= "透明化："
+        msg .= mouseCursor_Title
+      }
     } else {
-      msg .= "透明化："
-      msg .= mouseCursor_Title
+      msg .= "无法透明化桌面"
     }
-  } else {
-    msg .= "无法透明化桌面"
   }
 Return
