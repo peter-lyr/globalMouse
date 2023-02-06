@@ -1,5 +1,6 @@
 Down1:
   if (Flag_RightUp == 1 and Flag_RightUpCancel == 0) {
+    GoSub, TransparencyToggle
   } else if (Flag_LeftDown == 1) {
   } else if (Flag_LeftUp == 1) {
   } else if (Flag_MButtonDown == 1) {
@@ -7,6 +8,8 @@ Down1:
   } else if (Flag_WheelDown == 1) {
   } else if (Flag_WheelUp == 1) {
   } else {
-    tooltip, Down1
+    msg := ""
+    GoSub, TransparencyToggleMsg
+    tooltip, %msg%
   }
 Return
