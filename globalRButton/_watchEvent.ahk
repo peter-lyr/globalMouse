@@ -1,5 +1,6 @@
 Direction := ""
 
+#Include %A_ScriptDir%\globalRButton\_utils.ahk
 #Include %A_ScriptDir%\globalRButton\includeLabels.ahk
 #Include %A_ScriptDir%\globalRButton\_calculateDirection.ahk
 #Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt1\_watchCnt1.ahk

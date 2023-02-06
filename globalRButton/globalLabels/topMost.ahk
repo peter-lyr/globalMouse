@@ -1,6 +1,6 @@
 TopMostToggle:
   if (Flag_RightUpCancel == 0) {
-    if (StrLen(mouseCursor_Title) > 0 and mouseCursor_Title != "Program Manager") {
+    if (mouseCursor_IsDesktop() == 0) {
       WinGet, Status, ExStyle, ahk_id %mouseCursor_Id%
       if (Status & 0x8) {
         Winset, AlwaysOnTop, Off, ahk_id %mouseCursor_Id%
@@ -10,12 +10,13 @@ TopMostToggle:
         tooltip 已置顶：%mouseCursor_Title%
       }
     } else {
-      Send, {Esc}
       tooltip
     }
   } else {
-    Send, {Esc}
     tooltip
+  }
+  if (mouseCursor_IsToSendEsc() == 1) {
+    Send, {Esc}
   }
 Return
 
@@ -24,7 +25,7 @@ TopMostToggleMsg:
     if (StrLen(msg) > 0) {
       msg .= "`n"
     }
-    if (StrLen(mouseCursor_Title) > 0 and mouseCursor_Title != "Program Manager") {
+    if (mouseCursor_IsDesktop() == 0) {
       WinGet, Status, ExStyle, ahk_id %mouseCursor_Id%
       if (Status & 0x8) {
         msg .= "取消置顶："

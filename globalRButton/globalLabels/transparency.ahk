@@ -1,6 +1,6 @@
 TransparencyToggle:
   if (Flag_RightUpCancel == 0) {
-    if (StrLen(mouseCursor_Title) > 0 and mouseCursor_Title != "Program Manager") {
+    if (mouseCursor_IsDesktop() == 0) {
       WinGet, CurTransparency, Transparent, ahk_id %mouseCursor_Id%
       if (CurTransparency == "") {
         CurTransparency := 255
@@ -13,12 +13,13 @@ TransparencyToggle:
         tooltip 已透明化：%mouseCursor_Title%
       }
     } else {
-      Send, {Esc}
-      tooltip, %mouseCursor_Title%
+      tooltip
     }
   } else {
-    Send, {Esc}
     tooltip
+  }
+  if (mouseCursor_IsToSendEsc() == 1) {
+    Send, {Esc}
   }
 Return
 
@@ -27,7 +28,7 @@ TransparencyToggleMsg:
     if (StrLen(msg) > 0) {
       msg .= "`n"
     }
-    if (StrLen(mouseCursor_Title) > 0 and mouseCursor_Title != "Program Manager") {
+    if (mouseCursor_IsDesktop() == 0) {
       WinGet, CurTransparency, Transparent, ahk_id %mouseCursor_Id%
       if (CurTransparency == "") {
         CurTransparency := 255
