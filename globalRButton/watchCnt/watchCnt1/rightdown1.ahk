@@ -7,8 +7,12 @@ Rightdown1:
   } else if (Flag_MButtonDown == 1) {
   } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
+    GoSub, CtrlWinRight
   } else if (Flag_WheelUp == 1) {
+    GoSub, CtrlWinLeft
   } else {
-    tooltip, Rightdown1
+    msg := ""
+    GoSub, CtrlWinLeftRightMsg
+    tooltip, %msg%
   }
 Return
