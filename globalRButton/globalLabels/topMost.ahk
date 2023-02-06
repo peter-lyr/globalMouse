@@ -8,6 +8,9 @@ TopMostToggle:
       Winset, AlwaysOnTop, On, ahk_id %mouseCursor_Id%
       tooltip 已置顶：%mouseCursor_Title%
     }
+  } else {
+    Send, {Esc}
+    tooltip
   }
 Return
 
