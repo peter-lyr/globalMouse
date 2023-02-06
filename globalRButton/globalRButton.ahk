@@ -29,8 +29,8 @@ GlobalRButton:
 Return
 
 GlobalRButtonEnd:
-  GoSub, HideCircle
   SetTimer, DrawCircle1S, Off
+  GoSub, HideCircle
   GoSub, CntGlobalRButtonEnd
   SetTimer, _RemoveTooltip, -2200
 Return
