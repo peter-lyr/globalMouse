@@ -10,3 +10,10 @@ TopMostToggle:
     }
   }
 Return
+
+TopMostToggleMsg:
+  if (StrLen(msg) > 0) {
+    msg .= "`n"
+  }
+  msg .= "release RButton: topmost toggle"
+Return

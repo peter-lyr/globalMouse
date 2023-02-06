@@ -8,6 +8,8 @@ Up1:
   } else if (Flag_WheelDown == 1) {
   } else if (Flag_WheelUp == 1) {
   } else {
-    tooltip, Up1
+    msg := ""
+    GoSub, TopMostToggleMsg
+    tooltip, %msg%
   }
 Return
