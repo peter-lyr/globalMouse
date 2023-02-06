@@ -2,7 +2,13 @@ RButtonPressCnt := 0
 _RButtonTimerOut := 24
 _RButtonTimerCnt := _RButtonTimerOut
 
+CircleSize := 90
+CircleColor := "Red"
+
+GoSub, InitCircle
+
 #Include %A_ScriptDir%\globalRButton\_countRButton.ahk
+#Include %A_ScriptDir%\globalRButton\_drawCircle.ahk
 #Include %A_ScriptDir%\globalRButton\watchEvent.ahk
 
 _RemoveTooltip:
@@ -10,6 +16,7 @@ _RemoveTooltip:
 Return
 
 GlobalRButton:
+  GoSub, DrawCircle
   GoSub, CntGlobalRButton
   MouseGetPos, mouseCursor_X, mouseCursor_Y, mouseCursor_Id
   ; WinGetTitle, mouseCursor_Title, ahk_id %mouseCursor_Id%
@@ -20,6 +27,7 @@ GlobalRButton:
 Return
 
 GlobalRButtonEnd:
+  GoSub, HideCircle
   GoSub, CntGlobalRButtonEnd
   SetTimer, _RemoveTooltip, -2200
 Return

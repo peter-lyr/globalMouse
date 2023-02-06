@@ -3,7 +3,7 @@ MouseCursor_Direction:
   _dx := _x - mouseCursor_X
   _dy := _y - mouseCursor_Y
   _c  := sqrt(_dx ** 2 + _dy ** 2)
-  _gap := 90
+  _gap := CircleSize / 2
   _min := _gap * 0.3826834324 ;sin(22.5°) == 0.3826834324
   _max := _gap * 0.9238795325 ;sin(67.5°) == 0.9238795325
   if (_c <= _gap) {
