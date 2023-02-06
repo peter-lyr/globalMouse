@@ -1,6 +1,7 @@
 #Include %A_ScriptDir%\globalRButton\globalRButton.ahk
 #Include %A_ScriptDir%\globalRButton\_markFlag.ahk
 #Include %A_ScriptDir%\funcs\moveWindow.ahk
+#Include %A_ScriptDir%\funcs\resizeWindow.ahk
 
 ; ++++++++++++++++++++++++++++++++++++++
 ; GlobalRButton
@@ -47,4 +48,8 @@ Return
 
 ~RButton & LButton::
   GoSub, MoveWindow
+Return
+
+~RButton & MButton::
+  GoSub, ResizeWindow
 Return
