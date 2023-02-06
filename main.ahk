@@ -1,5 +1,6 @@
 #Include %A_ScriptDir%\globalRButton\globalRButton.ahk
 #Include %A_ScriptDir%\globalRButton\_markFlag.ahk
+#Include %A_ScriptDir%\funcs\moveWindow.ahk
 
 ; ++++++++++++++++++++++++++++++++++++++
 ; GlobalRButton
