@@ -16,26 +16,26 @@ Return
 Return
 
 ; 全局右键 - 标记左键
-~RButton & LButton::
+~LButton::
   GoSub, _Mark_LeftDown
 Return
-~RButton & LButton Up::
+~LButton Up::
   GoSub, _Mark_LeftUp
 Return
 
 ; 全局右键 - 标记中键
-~RButton & MButton::
+~MButton::
   GoSub, _Mark_MButtonDown
 Return
-~RButton & MButton Up::
+~MButton Up::
   GoSub, _Mark_MButtonUp
 Return
 
 ; 全局右键 - 标记滚轮
-~RButton & WheelUp::
+~WheelUp::
   GoSub, _Mark_WheelUp
 Return
-~RButton & WheelDown::
+~WheelDown::
   GoSub, _Mark_WheelDown
 Return
 

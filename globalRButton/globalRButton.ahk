@@ -5,6 +5,10 @@ _RButtonTimerCnt := _RButtonTimerOut
 #Include %A_ScriptDir%\globalRButton\_countRButton.ahk
 #Include %A_ScriptDir%\globalRButton\watchEvent.ahk
 
+_RemoveTooltip:
+  tooltip
+Return
+
 GlobalRButton:
   GoSub, CntGlobalRButton
   MouseGetPos, mouseCursor_X, mouseCursor_Y, mouseCursor_Id
@@ -17,4 +21,5 @@ Return
 
 GlobalRButtonEnd:
   GoSub, CntGlobalRButtonEnd
+  SetTimer, _RemoveTooltip, -2200
 Return
