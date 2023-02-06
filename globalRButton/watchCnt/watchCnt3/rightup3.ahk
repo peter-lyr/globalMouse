@@ -11,6 +11,5 @@ Rightup3:
   } else if (Flag_WheelDown == 1) {
   } else if (Flag_WheelUp == 1) {
   } else {
-    tooltip, Rightup3
   }
 Return
