@@ -9,7 +9,7 @@ GoSub, InitCircle
 
 #Include %A_ScriptDir%\globalRButton\_countRButton.ahk
 #Include %A_ScriptDir%\globalRButton\_drawCircle.ahk
-#Include %A_ScriptDir%\globalRButton\watchEvent.ahk
+#Include %A_ScriptDir%\globalRButton\_watchEvent.ahk
 
 _RemoveTooltip:
   tooltip

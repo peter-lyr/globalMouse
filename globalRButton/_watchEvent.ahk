@@ -1,9 +1,9 @@
 Direction := ""
 
 #Include %A_ScriptDir%\globalRButton\_calculateDirection.ahk
-#Include %A_ScriptDir%\globalRButton\watchCnt1.ahk
-#Include %A_ScriptDir%\globalRButton\watchCnt2.ahk
-#Include %A_ScriptDir%\globalRButton\watchCnt3.ahk
+#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt1\_watchCnt1.ahk
+#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\_watchCnt2.ahk
+#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt3\_watchCnt3.ahk
 
 RButtonWatcher:
   GetKeyState, RButtonSta, RButton, P
