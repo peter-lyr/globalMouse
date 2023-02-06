@@ -6,6 +6,7 @@ RestoreMaximizeWindow:
     } else {
       WinRestore, ahk_id %mouseCursor_Id%
     }
+    tooltip
   }
 Return
 

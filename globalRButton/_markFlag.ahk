@@ -63,6 +63,7 @@ _Mark_WheelDown:
   Flag_WheelUp := 0
   SetTimer, _RemoveFlag_WheelDown, -211
   Flag_RightUpCancel := 1
+  Flag_WheelUsed := 1
 Return
 
 ; 标记滚轮向上
@@ -74,4 +75,5 @@ _Mark_WheelUp:
   Flag_WheelDown := 0
   SetTimer, _RemoveFlag_WheelUp, -211
   Flag_RightUpCancel := 1
+  Flag_WheelUsed := 1
 Return

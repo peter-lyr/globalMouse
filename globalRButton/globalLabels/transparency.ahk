@@ -6,12 +6,9 @@ TransparencyToggle:
     }
     if (CurTransparency > 0 && CurTransparency < 255) {
       WinSet, Transparent, 255, ahk_id %mouseCursor_Id%
-      tooltip 已取消透明化：%mouseCursor_Title%
     } else {
       WinSet, Transparent, 200, ahk_id %mouseCursor_Id%
-      tooltip 已透明化：%mouseCursor_Title%
     }
-  } else {
     tooltip
   }
 Return

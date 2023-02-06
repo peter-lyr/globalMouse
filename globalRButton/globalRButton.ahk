@@ -17,6 +17,7 @@ Return
 
 GlobalRButton:
   Flag_RightUpCancel := 0
+  Flag_WheelUsed := 0
   GoSub, DrawCircle
   GoSub, CntGlobalRButton
   MouseGetPos, mouseCursor_X, mouseCursor_Y, mouseCursor_Id

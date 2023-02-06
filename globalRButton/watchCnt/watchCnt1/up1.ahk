@@ -2,7 +2,7 @@ Up1:
   if (Flag_RightUp == 1) {
     if (Flag_RightUpCancel == 0) {
       GoSub, TopMostToggle
-    } else {
+    } else if (Flag_WheelUsed == 1) {
       tooltip
     }
     if (mouseCursor_IsToSendEsc() == 1) {
