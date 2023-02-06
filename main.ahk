@@ -13,6 +13,7 @@ Return
 ; 全局右键 - 结束
 ~RButton Up::
   GoSub, GlobalRButtonEnd
+  GoSub, _Mark_RightUp
 Return
 
 ; 全局右键 - 标记左键

@@ -1,3 +1,13 @@
+; 标记左键抬起
+_RemoveFlag_RightUp:
+  Flag_RightUp := 0
+Return
+_Mark_RightUp:
+  Flag_RightUp := 1
+  SetTimer, _RemoveFlag_RightUp, -211
+Return
+
+
 ; 标记左键按下
 _RemoveFlag_LeftDown:
   Flag_LeftDown := 0
