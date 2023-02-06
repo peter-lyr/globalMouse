@@ -43,3 +43,7 @@ Return
 ; ++++++++++++++++++++++++++++++++++++++
 ; GlobalRButton
 ; ++++++++++++++++++++++++++++++++++++++
+
+~RButton & LButton::
+  GoSub, MoveWindow
+Return
