@@ -1,6 +1,13 @@
 Down1:
   if (Flag_RightUp == 1) {
-    GoSub, TransparencyToggle
+    if (Flag_RightUpCancel == 0) {
+      GoSub, TransparencyToggle
+    } else {
+      tooltip
+    }
+    if (mouseCursor_IsToSendEsc() == 1) {
+      Send, {Esc}
+    }
   } else if (Flag_LeftDown == 1) {
   } else if (Flag_LeftUp == 1) {
   } else if (Flag_MButtonDown == 1) {
@@ -9,7 +16,9 @@ Down1:
   } else if (Flag_WheelUp == 1) {
   } else {
     msg := ""
-    GoSub, TransparencyToggleMsg
+    if (Flag_RightUpCancel == 0) {
+      GoSub, TransparencyToggleMsg
+    }
     tooltip, %msg%
   }
 Return
