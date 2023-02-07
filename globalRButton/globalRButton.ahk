@@ -16,6 +16,7 @@ _RemoveTooltip:
 Return
 
 GlobalRButton:
+  SomeThingDone := 0
   Flag_RButtonDown := 1
   Flag_RightUpCancel := 0
   Flag_WheelUsed := 0

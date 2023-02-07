@@ -5,18 +5,18 @@ Up1:
     } else if (Flag_WheelUsed == 1) {
       tooltip
     }
-    if (mouseCursor_IsToSendEsc() == 1) {
-      Send, {Esc}
-    }
+    SomeThingDone := 1
   } else if (Flag_LeftDown == 1) {
   } else if (Flag_LeftUp == 1) {
   } else if (Flag_MButtonDown == 1) {
   } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
     GoSub, VolumeDown
+    SomeThingDone := 1
     Flag_WheelDown := 0
   } else if (Flag_WheelUp == 1) {
     GoSub, VolumeUp
+    SomeThingDone := 1
     Flag_WheelUp := 0
   } else {
     msg := ""

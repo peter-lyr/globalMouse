@@ -1,3 +1,8 @@
+#SingleInstance force
+#Usehook On
+
+SomeThingDone := 0
+
 #Include %A_ScriptDir%\globalRButton\globalRButton.ahk
 #Include %A_ScriptDir%\globalRButton\_markFlag.ahk
 #Include %A_ScriptDir%\funcs\moveWindow.ahk
@@ -8,12 +13,12 @@
 ; ++++++++++++++++++++++++++++++++++++++
 
 ; 全局右键
-~RButton::
+RButton::
   GoSub, GlobalRButton
 Return
 
 ; 全局右键 - 结束
-~RButton Up::
+RButton Up::
   GoSub, GlobalRButtonEnd
   GoSub, _Mark_RightUp
 Return
