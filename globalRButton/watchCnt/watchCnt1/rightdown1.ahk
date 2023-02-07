@@ -10,8 +10,10 @@ Rightdown1:
   } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
     GoSub, CtrlWinRight
+    Flag_WheelDown := 0
   } else if (Flag_WheelUp == 1) {
     GoSub, CtrlWinLeft
+    Flag_WheelUp := 0
   } else {
     msg := ""
     GoSub, CtrlWinLeftRightMsg
