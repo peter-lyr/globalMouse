@@ -67,7 +67,9 @@ TransparencySlideMsg:
     msg .= "`n"
   }
   if (mouseCursor_IsDesktop() == 0) {
-    msg .= "滚动滚轮改变透明度"
+    WinGet, CurTransparency, Transparent, ahk_id %mouseCursor_Id%
+    msg .= "滚动滚轮改变窗口透明度: "
+    msg .= CurTransparency
   } else {
     msg .= "无法透明化桌面"
   }
