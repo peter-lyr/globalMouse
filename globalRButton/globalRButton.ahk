@@ -16,6 +16,7 @@ _RemoveTooltip:
 Return
 
 GlobalRButton:
+  Flag_RButtonDown := 1
   Flag_RightUpCancel := 0
   Flag_WheelUsed := 0
   GoSub, DrawCircle
@@ -29,6 +30,7 @@ GlobalRButton:
 Return
 
 GlobalRButtonEnd:
+  Flag_RButtonDown := 0
   SetTimer, DrawCircle1S, Off
   GoSub, HideCircle
   GoSub, CntGlobalRButtonEnd

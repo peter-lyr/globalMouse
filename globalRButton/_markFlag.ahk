@@ -64,6 +64,9 @@ _Mark_WheelDown:
   SetTimer, _RemoveFlag_WheelDown, -211
   Flag_RightUpCancel := 1
   Flag_WheelUsed := 1
+  if (Flag_RButtonDown == 0) {
+    Send, {WheelDown}
+  }
 Return
 
 ; 标记滚轮向上
@@ -76,4 +79,7 @@ _Mark_WheelUp:
   SetTimer, _RemoveFlag_WheelUp, -211
   Flag_RightUpCancel := 1
   Flag_WheelUsed := 1
+  if (Flag_RButtonDown == 0) {
+    Send, {WheelUp}
+  }
 Return

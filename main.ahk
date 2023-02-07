@@ -35,10 +35,10 @@ Return
 Return
 
 ; 全局右键 - 标记滚轮
-~WheelUp::
+$WheelUp::
   GoSub, _Mark_WheelUp
 Return
-~WheelDown::
+$WheelDown::
   GoSub, _Mark_WheelDown
 Return
 
