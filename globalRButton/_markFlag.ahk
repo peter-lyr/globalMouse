@@ -10,8 +10,8 @@ _RemoveFlag_RightUp:
 Return
 _Mark_RightUp:
   Flag_RightUp := 1
-  SetTimer, _RemoveFlag_RightUp, -211
-  SetTimer, SendRButtonUp, -230
+  SetTimer, _RemoveFlag_RightUp, -20
+  SetTimer, SendRButtonUp, -150
 Return
 
 
@@ -22,7 +22,7 @@ Return
 _Mark_LeftDown:
   Flag_LeftDown := 1
   Flag_LeftUp := 0
-  SetTimer, _RemoveFlag_LeftDown, -211
+  SetTimer, _RemoveFlag_LeftDown, -20
   Flag_RightUpCancel := 1
 Return
 
@@ -33,7 +33,7 @@ Return
 _Mark_LeftUp:
   Flag_LeftUp := 1
   Flag_LeftDown := 0
-  SetTimer, _RemoveFlag_LeftUp, -211
+  SetTimer, _RemoveFlag_LeftUp, -20
   Flag_RightUpCancel := 1
 Return
 
@@ -45,7 +45,7 @@ Return
 _Mark_MButtonDown:
   Flag_MButtonDown := 1
   Flag_MButtonUp := 0
-  SetTimer, _RemoveFlag_MButtonDown, -211
+  SetTimer, _RemoveFlag_MButtonDown, -20
   Flag_RightUpCancel := 1
 Return
 
@@ -56,7 +56,7 @@ Return
 _Mark_MButtonUp:
   Flag_MButtonUp := 1
   Flag_MButtonDown := 0
-  SetTimer, _RemoveFlag_MButtonUp, -211
+  SetTimer, _RemoveFlag_MButtonUp, -20
   Flag_RightUpCancel := 1
 Return
 
@@ -68,7 +68,7 @@ Return
 _Mark_WheelDown:
   Flag_WheelDown := 1
   Flag_WheelUp := 0
-  SetTimer, _RemoveFlag_WheelDown, -211
+  SetTimer, _RemoveFlag_WheelDown, -20
   Flag_RightUpCancel := 1
   Flag_WheelUsed := 1
   if (Flag_RButtonDown == 0) {
@@ -83,7 +83,7 @@ Return
 _Mark_WheelUp:
   Flag_WheelUp := 1
   Flag_WheelDown := 0
-  SetTimer, _RemoveFlag_WheelUp, -211
+  SetTimer, _RemoveFlag_WheelUp, -20
   Flag_RightUpCancel := 1
   Flag_WheelUsed := 1
   if (Flag_RButtonDown == 0) {
