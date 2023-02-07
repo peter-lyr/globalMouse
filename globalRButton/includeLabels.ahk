@@ -4,3 +4,4 @@
 #Include %A_ScriptDir%\globalRButton\globalLabels\restoreMaximizeWindow.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\ctrlAltTab.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\minimizeWindow.ahk
+#Include %A_ScriptDir%\globalRButton\globalLabels\altTab.ahk
