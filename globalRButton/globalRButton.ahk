@@ -1,5 +1,5 @@
 RButtonPressCnt := 0
-_RButtonTimerOut := 24
+_RButtonTimerOut := 12
 _RButtonTimerCnt := _RButtonTimerOut
 
 CircleSize := 90
@@ -13,8 +13,9 @@ Flag_SwapMouseButton := DllCall("SwapMouseButton")
 #Include %A_ScriptDir%\globalRButton\_drawCircle.ahk
 #Include %A_ScriptDir%\globalRButton\_watchEvent.ahk
 
-SendRButtonUp:
-  if (SomeThingDone == 0 and Direction == "Center") {
+SendRButtonUpWatcher:
+  if (_RButtonTimerCnt > _RButtonTimerOut) {
+    SetTimer, SendRButtonUpWatcher, Off
     if (Flag_SwapMouseButton) {
       Send, {LButton}
     } else {
@@ -23,11 +24,18 @@ SendRButtonUp:
   }
 Return
 
+SendRButtonUp:
+  if (SomeThingDone == 0 and Direction == "Center") {
+    SetTimer, SendRButtonUpWatcher, 10
+  }
+Return
+
 _RemoveTooltip:
   tooltip
 Return
 
 GlobalRButton:
+  SetTimer, SendRButtonUpWatcher, Off
   SomeThingDone := 0
   Flag_RButtonDown := 1
   Flag_RightUpCancel := 0

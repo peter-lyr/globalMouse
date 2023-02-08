@@ -1,6 +1,7 @@
 Rightdown2:
   if (Flag_RightUp == 1) {
     if (Flag_RightUpCancel == 0) {
+      GoSub, SendEsc
     } else if (Flag_WheelUsed == 1) {
       tooltip
     }
@@ -11,5 +12,10 @@ Rightdown2:
   } else if (Flag_WheelDown == 1) {
   } else if (Flag_WheelUp == 1) {
   } else {
+    msg := ""
+    if (Flag_RightUpCancel == 0) {
+      GoSub, SendEscMsg
+    }
+    tooltip, %msg%
   }
 Return

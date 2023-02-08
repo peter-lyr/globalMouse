@@ -7,3 +7,4 @@
 #Include %A_ScriptDir%\globalRButton\globalLabels\altTab.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\volume.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\swapMouseButton.ahk
+#Include %A_ScriptDir%\globalRButton\globalLabels\sendEsc.ahk
