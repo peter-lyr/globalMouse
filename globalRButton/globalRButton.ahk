@@ -43,6 +43,7 @@ GlobalRButton:
   GoSub, DrawCircle
   GoSub, CntGlobalRButton
   MouseGetPos, mouseCursor_X, mouseCursor_Y, mouseCursor_Id
+  WinActivate, ahk_id %mouseCursor_Id%
   WinGetTitle, mouseCursor_Title, ahk_id %mouseCursor_Id%
   WinGet, mouseCursor_ProcessName, ProcessName, %mouseCursor_Title%
   mouseCursor_Title := Trim(mouseCursor_Title)
