@@ -65,6 +65,7 @@ Return
 
 #if !IsRemoteDesktop
 ~RButton & LButton::
+  GoSub, _Mark_LeftDown
   GoSub, MoveWindow
 Return
 
