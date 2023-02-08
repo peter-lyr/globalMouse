@@ -6,12 +6,14 @@ CircleSize := 90
 CircleColor := "Red"
 
 GoSub, InitCircle
+GoSub, StartCheckMstsc
 
 Flag_SwapMouseButton := DllCall("SwapMouseButton")
 
 #Include %A_ScriptDir%\globalRButton\_countRButton.ahk
 #Include %A_ScriptDir%\globalRButton\_drawCircle.ahk
 #Include %A_ScriptDir%\globalRButton\_watchEvent.ahk
+#Include %A_ScriptDir%\globalRButton\_checkMsTsc.ahk
 
 SendRButtonUpWatcher:
   if (_RButtonTimerCnt > _RButtonTimerOut) {
