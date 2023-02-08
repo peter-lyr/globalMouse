@@ -7,9 +7,15 @@ Up3:
   } else if (Flag_LeftDown == 1) {
   } else if (Flag_LeftUp == 1) {
   } else if (Flag_MButtonDown == 1) {
+    GoSub, SwapMouseButtonDo
   } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
   } else if (Flag_WheelUp == 1) {
   } else {
+    msg := ""
+    if (Flag_RightUpCancel == 0) {
+      GoSub, SwapMouseButtonDoMsg
+    }
+    tooltip, %msg%
   }
 Return

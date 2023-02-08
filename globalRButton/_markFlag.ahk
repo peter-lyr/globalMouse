@@ -1,9 +1,3 @@
-SendRButtonUp:
-  if (SomeThingDone == 0) {
-    Send, {%A_ThisHotkey%}
-  }
-Return
-
 ; 标记左键抬起
 _RemoveFlag_RightUp:
   Flag_RightUp := 0
@@ -11,7 +5,6 @@ Return
 _Mark_RightUp:
   Flag_RightUp := 1
   SetTimer, _RemoveFlag_RightUp, -20
-  SetTimer, SendRButtonUp, -150
 Return
 
 

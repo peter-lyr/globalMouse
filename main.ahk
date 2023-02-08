@@ -38,6 +38,9 @@ Return
 ~MButton Up::
   GoSub, _Mark_MButtonUp
 Return
+~RButton & MButton Up::
+  GoSub, _Mark_MButtonUp
+Return
 
 ; 全局右键 - 标记滚轮
 $WheelUp::
@@ -56,5 +59,6 @@ Return
 Return
 
 ~RButton & MButton::
+  GoSub, _Mark_MButtonDown
   GoSub, ResizeWindow
 Return

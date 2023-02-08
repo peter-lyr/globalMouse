@@ -7,9 +7,21 @@ CircleColor := "Red"
 
 GoSub, InitCircle
 
+Flag_SwapMouseButton := DllCall("SwapMouseButton")
+
 #Include %A_ScriptDir%\globalRButton\_countRButton.ahk
 #Include %A_ScriptDir%\globalRButton\_drawCircle.ahk
 #Include %A_ScriptDir%\globalRButton\_watchEvent.ahk
+
+SendRButtonUp:
+  if (SomeThingDone == 0 and Direction == "Center") {
+    if (Flag_SwapMouseButton) {
+      Send, {LButton}
+    } else {
+      Send, {RButton}
+    }
+  }
+Return
 
 _RemoveTooltip:
   tooltip
@@ -31,6 +43,7 @@ GlobalRButton:
 Return
 
 GlobalRButtonEnd:
+  GoSub, SendRButtonUp
   Flag_RButtonDown := 0
   SetTimer, DrawCircle1S, Off
   GoSub, HideCircle
