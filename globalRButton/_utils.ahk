@@ -6,3 +6,18 @@ mouseCursor_IsDesktop() {
     Return 1
   }
 }
+
+GetListMsg(List, Index) {
+  ; Index从1开始
+  _Msg := ""
+  for k, v in List
+  {
+    if (k == Index) {
+      _Msg .= "----> "
+    } else {
+      _Msg .= "      "
+    }
+    _Msg .= v "`n"
+  }
+  Return _Msg
+}

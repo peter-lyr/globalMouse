@@ -7,6 +7,7 @@ CircleColor := "Red"
 
 GoSub, InitCircle
 GoSub, StartCheckMstsc
+GoSub, BatListInit
 
 Flag_SwapMouseButton := DllCall("SwapMouseButton")
 
