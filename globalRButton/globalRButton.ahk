@@ -1,5 +1,5 @@
 RButtonPressCnt := 0
-_RButtonTimerOut := 12
+_RButtonTimerOut := 8
 _RButtonTimerCnt := _RButtonTimerOut
 
 CircleSize := 90
