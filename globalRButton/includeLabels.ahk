@@ -9,3 +9,4 @@
 #Include %A_ScriptDir%\globalRButton\globalLabels\swapMouseButton.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\sendEsc.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\sendEnter.ahk
+#Include %A_ScriptDir%\globalRButton\globalLabels\runBat.ahk
