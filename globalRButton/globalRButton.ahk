@@ -18,11 +18,7 @@ Flag_SwapMouseButton := DllCall("SwapMouseButton")
 SendRButtonUpWatcher:
   if (_RButtonTimerCnt > _RButtonTimerOut) {
     SetTimer, SendRButtonUpWatcher, Off
-    if (Flag_SwapMouseButton) {
-      Send, {LButton}
-    } else {
-      Send, {RButton}
-    }
+    Click, Right
   }
 Return
 

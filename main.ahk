@@ -1,6 +1,3 @@
-#SingleInstance force
-#Usehook On
-
 SomeThingDone := 0
 
 #Include %A_ScriptDir%\globalRButton\globalRButton.ahk
