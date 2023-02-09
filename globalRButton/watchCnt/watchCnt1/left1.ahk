@@ -11,12 +11,16 @@ Left1:
   } else if (Flag_MButtonDown == 1) {
   } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
+    GoSub, SendPgDnWheelDown
+    Flag_WheelDown := 0
+    SomeThingDone := 1
   } else if (Flag_WheelUp == 1) {
+    GoSub, SendPgUpWheelUp
+    Flag_WheelUp := 0
+    SomeThingDone := 1
   } else {
     msg := ""
-    if (Flag_RightUpCancel == 0) {
-      GoSub, CtrlAltTabMsg
-    }
+    GoSub, SendPgUpDnMsg
     tooltip, %msg%
   }
 Return
