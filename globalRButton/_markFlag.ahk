@@ -1,4 +1,4 @@
-; 标记左键抬起
+; 标记右键抬起
 _RemoveFlag_RightUp:
   Flag_RightUp := 0
 Return
@@ -14,8 +14,11 @@ _RemoveFlag_LeftDown:
 Return
 _Mark_LeftDown:
   tooltip
-  SetTimer, DrawCircle1S, Off
-  GoSub, HideCircle
+  GetKeyState, RButtonSta, RButton, P
+  if (RButtonSta == "U") {
+    SetTimer, DrawCircle1S, Off
+    GoSub, HideCircle
+  }
   Flag_LeftDown := 1
   Flag_LeftUp := 0
   SetTimer, _RemoveFlag_LeftDown, -20
@@ -40,8 +43,11 @@ _RemoveFlag_MButtonDown:
 Return
 _Mark_MButtonDown:
   tooltip
-  SetTimer, DrawCircle1S, Off
-  GoSub, HideCircle
+  GetKeyState, RButtonSta, RButton, P
+  if (RButtonSta == "U") {
+    SetTimer, DrawCircle1S, Off
+    GoSub, HideCircle
+  }
   Flag_MButtonDown := 1
   Flag_MButtonUp := 0
   SetTimer, _RemoveFlag_MButtonDown, -20
@@ -66,8 +72,11 @@ _RemoveFlag_WheelDown:
 Return
 _Mark_WheelDown:
   tooltip
-  SetTimer, DrawCircle1S, Off
-  GoSub, HideCircle
+  GetKeyState, RButtonSta, RButton, P
+  if (RButtonSta == "U") {
+    SetTimer, DrawCircle1S, Off
+    GoSub, HideCircle
+  }
   Flag_WheelDown := 1
   Flag_WheelUp := 0
   SetTimer, _RemoveFlag_WheelDown, -20
@@ -84,8 +93,11 @@ _RemoveFlag_WheelUp:
 Return
 _Mark_WheelUp:
   tooltip
-  SetTimer, DrawCircle1S, Off
-  GoSub, HideCircle
+  GetKeyState, RButtonSta, RButton, P
+  if (RButtonSta == "U") {
+    SetTimer, DrawCircle1S, Off
+    GoSub, HideCircle
+  }
   Flag_WheelUp := 1
   Flag_WheelDown := 0
   SetTimer, _RemoveFlag_WheelUp, -20
