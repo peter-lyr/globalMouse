@@ -13,6 +13,7 @@ _RemoveFlag_LeftDown:
   Flag_LeftDown := 0
 Return
 _Mark_LeftDown:
+  tooltip
   Flag_LeftDown := 1
   Flag_LeftUp := 0
   SetTimer, _RemoveFlag_LeftDown, -20
@@ -36,6 +37,7 @@ _RemoveFlag_MButtonDown:
   Flag_MButtonDown := 0
 Return
 _Mark_MButtonDown:
+  tooltip
   Flag_MButtonDown := 1
   Flag_MButtonUp := 0
   SetTimer, _RemoveFlag_MButtonDown, -20
@@ -59,6 +61,7 @@ _RemoveFlag_WheelDown:
   Flag_WheelDown := 0
 Return
 _Mark_WheelDown:
+  tooltip
   Flag_WheelDown := 1
   Flag_WheelUp := 0
   SetTimer, _RemoveFlag_WheelDown, -20
@@ -74,6 +77,7 @@ _RemoveFlag_WheelUp:
   Flag_WheelUp := 0
 Return
 _Mark_WheelUp:
+  tooltip
   Flag_WheelUp := 1
   Flag_WheelDown := 0
   SetTimer, _RemoveFlag_WheelUp, -20
