@@ -20,10 +20,10 @@ Rightdown1:
     Flag_WheelUp := 0
   } else {
     msg := ""
-    GoSub, CtrlWinLeftRightMsg
     if (Flag_RightUpCancel == 0) {
       GoSub, MinimizeWindowMsg
     }
+    GoSub, CtrlWinLeftRightMsg
     tooltip, %msg%
   }
 Return

@@ -15,8 +15,8 @@ SwapMouseButtonDoMsg:
     msg .= "`n"
   }
   if (Flag_SwapMouseButton) {
-    msg .= "点击中键: 切换回正常鼠标左右键"
+    msg .= "单击中键: 切换回正常鼠标左右键"
   } else {
-    msg .= "点击中键: 切换鼠标左右键"
+    msg .= "单击中键: 切换鼠标左右键"
   }
 Return

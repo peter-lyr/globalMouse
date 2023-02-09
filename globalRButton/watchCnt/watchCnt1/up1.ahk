@@ -23,6 +23,7 @@ Up1:
     if (Flag_RightUpCancel == 0) {
       GoSub, TopMostToggleMsg
     }
+    GoSub, VolumeMsg
     tooltip, %msg%
   }
 Return

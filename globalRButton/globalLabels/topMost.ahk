@@ -18,10 +18,10 @@ TopMostToggleMsg:
   if (mouseCursor_IsDesktop() == 0) {
     WinGet, Status, ExStyle, ahk_id %mouseCursor_Id%
     if (Status & 0x8) {
-      msg .= "取消置顶："
+      msg .= "松开右键取消置顶："
       msg .= mouseCursor_Title
     } else {
-      msg .= "置顶："
+      msg .= "松开右键置顶："
       msg .= mouseCursor_Title
     }
   } else {
