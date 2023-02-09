@@ -48,11 +48,11 @@ Return
 
 ; 全局右键 - 标记滚轮
 #if !IsRemoteDesktop
-$WheelUp::
+WheelUp::
   GoSub, _Mark_WheelUp
 Return
 #if !IsRemoteDesktop
-$WheelDown::
+WheelDown::
   GoSub, _Mark_WheelDown
 Return
 

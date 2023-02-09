@@ -65,7 +65,7 @@ _Mark_WheelDown:
   Flag_RightUpCancel := 1
   Flag_WheelUsed := 1
   if (Flag_RButtonDown == 0) {
-    Send, {WheelDown}
+    Click, WheelDown
   }
 Return
 
@@ -80,6 +80,6 @@ _Mark_WheelUp:
   Flag_RightUpCancel := 1
   Flag_WheelUsed := 1
   if (Flag_RButtonDown == 0) {
-    Send, {WheelUp}
+    Click, WheelUp
   }
 Return
