@@ -11,3 +11,4 @@
 #Include %A_ScriptDir%\globalRButton\globalLabels\sendEnter.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\runBat.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\shiftWheelUpDown.ahk
+#Include %A_ScriptDir%\globalRButton\globalLabels\sendCtrlC.ahk
