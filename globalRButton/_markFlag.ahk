@@ -13,9 +13,9 @@ _RemoveFlag_LeftDown:
   Flag_LeftDown := 0
 Return
 _Mark_LeftDown:
-  tooltip
   GetKeyState, RButtonSta, RButton, P
   if (RButtonSta == "U") {
+    tooltip
     SetTimer, DrawCircle1S, Off
     GoSub, HideCircle
   }
@@ -42,9 +42,9 @@ _RemoveFlag_MButtonDown:
   Flag_MButtonDown := 0
 Return
 _Mark_MButtonDown:
-  tooltip
   GetKeyState, RButtonSta, RButton, P
   if (RButtonSta == "U") {
+    tooltip
     SetTimer, DrawCircle1S, Off
     GoSub, HideCircle
   }
@@ -71,9 +71,9 @@ _RemoveFlag_WheelDown:
   Flag_WheelDown := 0
 Return
 _Mark_WheelDown:
-  tooltip
   GetKeyState, RButtonSta, RButton, P
   if (RButtonSta == "U") {
+    tooltip
     SetTimer, DrawCircle1S, Off
     GoSub, HideCircle
   }
@@ -92,9 +92,9 @@ _RemoveFlag_WheelUp:
   Flag_WheelUp := 0
 Return
 _Mark_WheelUp:
-  tooltip
   GetKeyState, RButtonSta, RButton, P
   if (RButtonSta == "U") {
+    tooltip
     SetTimer, DrawCircle1S, Off
     GoSub, HideCircle
   }
