@@ -1,6 +1,6 @@
 WinKill:
   if (!mouseCursor_IsDesktop()) {
-    WinKill, ahk_id %mouseWin%
+    WinKill, ahk_id %mouseCursor_Id%
   }
 Return
 
@@ -9,4 +9,5 @@ WinKillMsg:
     msg .= "`n"
   }
   msg .= "松开右键: WinKill"
+  msg .= mouseCursor_Title
 Return
