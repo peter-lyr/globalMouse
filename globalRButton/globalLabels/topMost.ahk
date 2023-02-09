@@ -25,6 +25,6 @@ TopMostToggleMsg:
       msg .= mouseCursor_Title
     }
   } else {
-    msg .= "无法置顶桌面"
+    msg .= "松开右键无法置顶桌面"
   }
 Return
