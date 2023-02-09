@@ -15,7 +15,7 @@ GetListMsg(List, Index) {
     if (k == Index) {
       _Msg .= "----> "
     } else {
-      _Msg .= "         "
+      _Msg .= "          "
     }
     _Msg .= v "`n"
   }
