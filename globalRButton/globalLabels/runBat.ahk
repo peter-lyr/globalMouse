@@ -37,11 +37,11 @@ BatListRightUp:
 Return
 
 BatListWheelUp:
-  BatIndex += 1
+  BatIndex -= 1
 Return
 
 BatListWheelDown:
-  BatIndex -= 1
+  BatIndex += 1
 Return
 
 BatListMsg:
