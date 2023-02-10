@@ -11,10 +11,9 @@
 #Include %A_ScriptDir%\globalRButton\globalLabels\sendEnter.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\runBat.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\shiftWheelUpDown.ahk
-#Include %A_ScriptDir%\globalRButton\globalLabels\sendCtrlC.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\sendLeftRight.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\sendPgUpDn.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\sendPgUpDn40.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\winKill.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\winTab.ahk
-#Include %A_ScriptDir%\globalRButton\globalLabels\explorer\copyPath.ahk
+#Include %A_ScriptDir%\globalRButton\globalLabels\ctrlCCopy.ahk
