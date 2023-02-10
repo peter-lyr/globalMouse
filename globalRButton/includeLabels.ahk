@@ -18,3 +18,4 @@
 #Include %A_ScriptDir%\globalRButton\globalLabels\winTab.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\ctrlCCopy.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\winV.ahk
+#Include %A_ScriptDir%\globalRButton\globalLabels\sendUpDown.ahk
