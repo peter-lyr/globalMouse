@@ -5,7 +5,7 @@ Center2:
       tooltip
     }
   } else if (Flag_LeftDown == 1) {
-    GoSub, ExplorerCopyPath
+    GoSub, CtrlCCopy
     SomeThingDone := 1
     Flag_LeftDown := 0
   } else if (Flag_LeftUp == 1) {
@@ -24,7 +24,7 @@ Center2:
     SomeThingDone := 1
   } else {
     msg := ""
-    GoSub, ExplorerCopyPathMsg
+    GoSub, CtrlCCopyMsg
     GoSub, WinVMsg
     GoSub, SendLeftRightMsg
     tooltip, %msg%

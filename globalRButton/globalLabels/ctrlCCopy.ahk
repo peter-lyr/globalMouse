@@ -24,18 +24,18 @@ ClipboardWatcher:
   }
 Return
 
-ExplorerCopyPath:
+CtrlCCopy:
   Send {Ctrl Down}c
   Send {Ctrl Up}
   SetTimer, ClipboardWatcher, 10
 Return
 
-ExplorerCopyPathMsg:
+CtrlCCopyMsg:
   if (StrLen(msg) > 0) {
     msg .= "`n"
   }
   if (PathCopied == 0) {
-    msg .= "单击: <Ctrl-C>复制"
+    msg .= "单击左键: <Ctrl-C>复制"
   } else {
     msg .= PathCopied
   }
