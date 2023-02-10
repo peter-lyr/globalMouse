@@ -10,7 +10,11 @@ Up3:
     GoSub, SwapMouseButtonDo
   } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
+    ; SomeThingDone := 1
+    ; Flag_WheelDown := 0
   } else if (Flag_WheelUp == 1) {
+    ; SomeThingDone := 1
+    ; Flag_WheelUp := 0
   } else {
     msg := ""
     if (Flag_RightUpCancel == 0) {

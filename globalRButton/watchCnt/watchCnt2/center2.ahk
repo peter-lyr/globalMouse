@@ -24,6 +24,8 @@ Center2:
     SomeThingDone := 1
   } else {
     msg := ""
+    if (Flag_RightUpCancel == 0) {
+    }
     GoSub, CtrlCCopyMsg
     GoSub, WinVMsg
     GoSub, SendLeftRightMsg

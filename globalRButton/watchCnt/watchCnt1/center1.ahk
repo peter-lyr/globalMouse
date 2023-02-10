@@ -18,6 +18,8 @@ Center1:
     Flag_WheelUp := 0
   } else {
     msg := SelectedWindow_ProcessName
+    if (Flag_RightUpCancel == 0) {
+    }
     GoSub, ShiftWheelMsg
     tooltip, %msg%
   }

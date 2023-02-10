@@ -12,12 +12,12 @@ Left1:
   } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
     GoSub, SendPgDnWheelDown
-    Flag_WheelDown := 0
     SomeThingDone := 1
+    Flag_WheelDown := 0
   } else if (Flag_WheelUp == 1) {
     GoSub, SendPgUpWheelUp
-    Flag_WheelUp := 0
     SomeThingDone := 1
+    Flag_WheelUp := 0
   } else {
     msg := ""
     GoSub, SendPgUpDnMsg
