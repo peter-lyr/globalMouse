@@ -13,8 +13,8 @@ Center2:
     SomeThingDone := 1
     Flag_LeftDown := 0
     GoSub, WinV
-  } else if (Flag_MButtonUp == 1) {
-  ; } else if (Flag_WheelDown == 1) {
+  ; } else if (Flag_MButtonUp == 1) {
+  } else if (Flag_WheelDown == 1) {
     Flag_WheelDown := 0
     SomeThingDone := 1
     GoSub, SendRightWheelDown
