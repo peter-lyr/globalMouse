@@ -1,7 +1,7 @@
 MouseCursor_Direction:
   MouseGetPos, _x, _y
-  _dx := _x - mouseCursor_X
-  _dy := _y - mouseCursor_Y
+  _dx := _x - SelectedWindow_X
+  _dy := _y - SelectedWindow_Y
   _c  := sqrt(_dx ** 2 + _dy ** 2)
   _gap := CircleSize / 2
   _min := _gap * 0.3826834324 ;sin(22.5°) == 0.3826834324

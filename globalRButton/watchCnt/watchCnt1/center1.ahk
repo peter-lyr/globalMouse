@@ -17,7 +17,7 @@ Center1:
     SomeThingDone := 1
     Flag_WheelUp := 0
   } else {
-    msg := mouseCursor_ProcessName
+    msg := SelectedWindow_ProcessName
     GoSub, ShiftWheelMsg
     tooltip, %msg%
   }

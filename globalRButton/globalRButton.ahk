@@ -41,12 +41,9 @@ GlobalRButton:
   Flag_WheelUsed := 0
   GoSub, DrawCircle
   GoSub, CntGlobalRButton
-  MouseGetPos, mouseCursor_X, mouseCursor_Y, mouseCursor_Id
-  WinActivate, ahk_id %mouseCursor_Id%
-  WinGetTitle, mouseCursor_Title, ahk_id %mouseCursor_Id%
-  WinGet, mouseCursor_ProcessName, ProcessName, %mouseCursor_Title%
-  mouseCursor_Title := Trim(mouseCursor_Title)
-  mouseCursor_ProcessName := Trim(mouseCursor_ProcessName)
+  MouseGetPos, SelectedWindow_X, SelectedWindow_Y, SelectedWindow_Id
+  WinActivate, ahk_id %SelectedWindow_Id%
+  SelectedWindow(SelectedWindow_Id)
   SetTimer, RButtonWatcher, 10
 Return
 

@@ -4,6 +4,7 @@ SomeThingDone := 0
 #Include %A_ScriptDir%\globalRButton\_markFlag.ahk
 #Include %A_ScriptDir%\funcs\moveWindow.ahk
 #Include %A_ScriptDir%\funcs\resizeWindow.ahk
+#Include %A_ScriptDir%\keyboard\keyboard.ahk
 
 ; ++++++++++++++++++++++++++++++++++++++
 ; GlobalRButton

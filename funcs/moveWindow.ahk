@@ -23,7 +23,7 @@ return
 MoveWindow:
   CoordMode, Mouse, Screen
   MouseGetPos, _X1, _Y1, MoveWindow_Id
-  if (mouseCursor_IsDesktop()) {
+  if (SelectedWindow_IsDesktop()) {
     Return
   }
   WinGetPos, MoveWindow_OriX, MoveWindow_OriY, , , ahk_id %MoveWindow_Id%
