@@ -30,3 +30,11 @@ SelectedWindow(SelectedWindow_Id) {
   SelectedWindow_Title := Trim(SelectedWindow_Title)
   SelectedWindow_ProcessName := Trim(SelectedWindow_ProcessName)
 }
+
+SelectedWindow_IsExplorer() {
+  global SelectedWindow_ProcessName
+  if (RegexMatch(SelectedWindow_ProcessName, "i)explorer\.exe") || RegexMatch(CurWinTitle, "i)Program Manager")) {
+    Return 1
+  }
+  Return 0
+}

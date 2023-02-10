@@ -35,6 +35,7 @@ Return
 
 GlobalRButton:
   SetTimer, SendRButtonUpWatcher, Off
+  PathCopied := 0
   SomeThingDone := 0
   Flag_RButtonDown := 1
   Flag_RightUpCancel := 0
