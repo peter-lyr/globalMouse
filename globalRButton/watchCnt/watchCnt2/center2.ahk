@@ -5,6 +5,9 @@ Center2:
       tooltip
     }
   } else if (Flag_LeftDown == 1) {
+    GoSub, ExplorerCopyPath
+    SomeThingDone := 1
+    Flag_LeftDown := 0
   } else if (Flag_LeftUp == 1) {
   } else if (Flag_MButtonDown == 1) {
   } else if (Flag_MButtonUp == 1) {
@@ -18,6 +21,7 @@ Center2:
     SomeThingDone := 1
   } else {
     msg := ""
+    GoSub, ExplorerCopyPathMsg
     GoSub, SendLeftRightMsg
     tooltip, %msg%
   }
