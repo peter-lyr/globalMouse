@@ -77,6 +77,7 @@ _Mark_WheelDown:
     SetTimer, DrawCircle1S, Off
     GoSub, HideCircle
   }
+  PgDn40Cnt := 0
   Flag_WheelDown := 1
   Flag_WheelUp := 0
   SetTimer, _RemoveFlag_WheelDown, -20
@@ -98,6 +99,7 @@ _Mark_WheelUp:
     SetTimer, DrawCircle1S, Off
     GoSub, HideCircle
   }
+  PgDn40Cnt := 0
   Flag_WheelUp := 1
   Flag_WheelDown := 0
   SetTimer, _RemoveFlag_WheelUp, -20

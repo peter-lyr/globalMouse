@@ -1,21 +1,29 @@
 SendPgUp40WheelUp:
-  Loop 40
+  while PgDn40Cnt < 40
   {
+    if (Flag_WheelDown == 1) {
+      Break
+    }
+    PgDn40Cnt += 1
     Send, {PgUp}
     GetKeyState, _RButtonStatus, RButton, P
     if (_RButtonStatus == "U") {
-      break
+      Break
     }
   }
 Return
 
 SendPgDn40WheelDown:
-  Loop 40
+  while PgDn40Cnt < 40
   {
+    if (Flag_WheelUp == 1) {
+      Break
+    }
+    PgDn40Cnt += 1
     Send, {PgDn}
     GetKeyState, _RButtonStatus, RButton, P
     if (_RButtonStatus == "U") {
-      break
+      Break
     }
   }
 Return
