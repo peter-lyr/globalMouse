@@ -9,13 +9,13 @@ Center1:
   ; } else if (Flag_MButtonDown == 1) {
   ; } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
-    GoSub, ShiftWheelDown
     SomeThingDone := 1
     Flag_WheelDown := 0
+    GoSub, ShiftWheelDown
   } else if (Flag_WheelUp == 1) {
-    GoSub, ShiftWheelUp
     SomeThingDone := 1
     Flag_WheelUp := 0
+    GoSub, ShiftWheelUp
   } else {
     msg := SelectedWindow_ProcessName
     if (Flag_RightUpCancel == 0) {

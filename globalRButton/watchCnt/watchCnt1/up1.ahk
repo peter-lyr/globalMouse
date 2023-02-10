@@ -11,13 +11,13 @@ Up1:
   ; } else if (Flag_MButtonDown == 1) {
   ; } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
-    GoSub, VolumeDown
     SomeThingDone := 1
     Flag_WheelDown := 0
+    GoSub, VolumeDown
   } else if (Flag_WheelUp == 1) {
-    GoSub, VolumeUp
     SomeThingDone := 1
     Flag_WheelUp := 0
+    GoSub, VolumeUp
   } else {
     msg := ""
     if (Flag_RightUpCancel == 0) {

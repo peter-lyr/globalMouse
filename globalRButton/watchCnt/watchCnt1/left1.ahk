@@ -11,13 +11,13 @@ Left1:
   ; } else if (Flag_MButtonDown == 1) {
   ; } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
-    GoSub, SendPgDnWheelDown
     SomeThingDone := 1
     Flag_WheelDown := 0
+    GoSub, SendPgDnWheelDown
   } else if (Flag_WheelUp == 1) {
-    GoSub, SendPgUpWheelUp
     SomeThingDone := 1
     Flag_WheelUp := 0
+    GoSub, SendPgUpWheelUp
   } else {
     msg := ""
     GoSub, SendPgUpDnMsg

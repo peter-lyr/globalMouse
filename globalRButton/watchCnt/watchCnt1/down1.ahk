@@ -11,13 +11,13 @@ Down1:
   ; } else if (Flag_MButtonDown == 1) {
   ; } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
-    GoSub, TransparencySlideDown
     SomeThingDone := 1
     Flag_WheelDown := 0
+    GoSub, TransparencySlideDown
   } else if (Flag_WheelUp == 1) {
-    GoSub, TransparencySlideUp
     SomeThingDone := 1
     Flag_WheelUp := 0
+    GoSub, TransparencySlideUp
   } else {
     msg := ""
     if (Flag_RightUpCancel == 0) {

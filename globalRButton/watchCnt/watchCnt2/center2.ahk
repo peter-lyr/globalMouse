@@ -5,23 +5,23 @@ Center2:
       tooltip
     }
   } else if (Flag_LeftDown == 1) {
-    GoSub, CtrlCCopy
     SomeThingDone := 1
     Flag_LeftDown := 0
+    GoSub, CtrlCCopy
   } else if (Flag_LeftUp == 1) {
   } else if (Flag_MButtonDown == 1) {
-    GoSub, WinV
     SomeThingDone := 1
     Flag_LeftDown := 0
+    GoSub, WinV
   } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
-    GoSub, SendRightWheelDown
     Flag_WheelDown := 0
     SomeThingDone := 1
+    GoSub, SendRightWheelDown
   } else if (Flag_WheelUp == 1) {
-    GoSub, SendLeftWheelUp
     Flag_WheelUp := 0
     SomeThingDone := 1
+    GoSub, SendLeftWheelUp
   } else {
     msg := ""
     if (Flag_RightUpCancel == 0) {
