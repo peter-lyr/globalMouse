@@ -9,9 +9,9 @@ WinKillMsg:
     msg .= "`n"
   }
   if (!SelectedWindow_IsDesktop()) {
-    msg .= "松开右键WinKill："
+    msg .= "松开右键: WinKill："
     msg .= SelectedWindow_Title
   } else {
-    msg .= "松开右键无法WinKill桌面"
+    msg .= "松开右键: 无法WinKill桌面"
   }
 Return

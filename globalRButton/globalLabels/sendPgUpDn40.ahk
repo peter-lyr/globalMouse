@@ -32,5 +32,5 @@ SendPgUpDn40Msg:
   if (StrLen(msg) > 0) {
     msg .= "`n"
   }
-  msg .= "滚动滚轮：PgUp/Dn 40"
+  msg .= "滚动滚轮: PgUp/Dn 40"
 Return

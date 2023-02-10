@@ -14,5 +14,5 @@ CtrlWinLeftRightMsg:
   if (StrLen(msg) > 0) {
     msg .= "`n"
   }
-  msg .= "滚动滚轮切换虚拟桌面"
+  msg .= "滚动滚轮: 切换虚拟桌面"
 Return

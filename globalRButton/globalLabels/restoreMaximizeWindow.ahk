@@ -17,10 +17,10 @@ RestoreMaximizeWindowMsg:
   if (SelectedWindow_IsDesktop() == 0) {
     WinGet, _status, MinMax, ahk_id %SelectedWindow_Id%
     if (_status == 0) {
-      msg .= "松开右键最大化窗口："
+      msg .= "松开右键: 最大化窗口："
       msg .= Trim(SelectedWindow_Title)
     } else {
-      msg .= "松开右键恢复窗口："
+      msg .= "松开右键: 恢复窗口："
       msg .= Trim(SelectedWindow_Title)
     }
   }

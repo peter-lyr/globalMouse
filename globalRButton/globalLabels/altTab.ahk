@@ -8,5 +8,5 @@ AltTabMsg:
   if (StrLen(msg) > 0) {
     msg .= "`n"
   }
-  msg .= "松开右键<Alt-Tab>"
+  msg .= "松开右键: <Alt-Tab>"
 Return

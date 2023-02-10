@@ -18,13 +18,13 @@ TopMostToggleMsg:
   if (SelectedWindow_IsDesktop() == 0) {
     WinGet, Status, ExStyle, ahk_id %SelectedWindow_Id%
     if (Status & 0x8) {
-      msg .= "松开右键取消置顶："
+      msg .= "松开右键: 取消置顶："
       msg .= SelectedWindow_Title
     } else {
-      msg .= "松开右键置顶："
+      msg .= "松开右键: 置顶："
       msg .= SelectedWindow_Title
     }
   } else {
-    msg .= "松开右键无法置顶桌面"
+    msg .= "松开右键: 无法置顶桌面"
   }
 Return

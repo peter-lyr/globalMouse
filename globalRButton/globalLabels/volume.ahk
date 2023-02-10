@@ -10,5 +10,5 @@ VolumeMsg:
   if (StrLen(msg) > 0) {
     msg .= "`n"
   }
-  msg .= "滚动滚轮改变音量"
+  msg .= "滚动滚轮: 改变音量"
 Return

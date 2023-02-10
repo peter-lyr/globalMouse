@@ -12,5 +12,5 @@ ShiftWheelMsg:
   if (StrLen(msg) > 0) {
     msg .= "`n"
   }
-  msg .= "滚动滚轮：<Shift-WheelUp/Down>"
+  msg .= "滚动滚轮: <Shift-WheelUp/Down>"
 Return
