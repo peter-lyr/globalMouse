@@ -21,4 +21,3 @@ RButtonWatcher:
     GoSub, WatchCnt3
   }
 Return
-

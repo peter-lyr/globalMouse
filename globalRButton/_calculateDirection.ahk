@@ -34,4 +34,3 @@ MouseCursor_Direction:
     }
   }
 Return
-
