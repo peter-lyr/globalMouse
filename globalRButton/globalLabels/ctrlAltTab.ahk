@@ -11,4 +11,3 @@ ctrlAltTabMsg:
   }
   msg .= "松开右键: <Alt+Ctrl+TAb>"
 Return
-
