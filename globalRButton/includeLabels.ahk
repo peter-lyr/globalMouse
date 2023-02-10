@@ -17,4 +17,4 @@
 #Include %A_ScriptDir%\globalRButton\globalLabels\sendPgUpDn40.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\winKill.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\winTab.ahk
-#Include %A_ScriptDir%\globalRButton\globalLabels\explorer.ahk
+#Include %A_ScriptDir%\globalRButton\globalLabels\explorer\copyPath.ahk

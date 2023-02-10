@@ -1,3 +1,5 @@
+ClipboardWatcher:
+  _Clipboard=%clipboard%
   if (_Clipboard != "") {
     SetTimer, ClipboardWatcher, Off
     if (_Clipboard != _OldClipboard) {
