@@ -21,6 +21,9 @@ Left1:
   } else {
     msg := ""
     GoSub, SendPgUpDnMsg
+    if (Flag_RightUpCancel == 0) {
+      GoSub, CtrlAltTabMsg
+    }
     tooltip, %msg%
   }
 Return

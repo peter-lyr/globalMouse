@@ -5,7 +5,7 @@ CtrlAltTab:
   tooltip
 Return
 
-ctrlAltTabMsg:
+CtrlAltTabMsg:
   if (StrLen(msg) > 0) {
     msg .= "`n"
   }
