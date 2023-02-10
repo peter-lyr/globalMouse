@@ -30,8 +30,5 @@ MoveWindow:
   WinGet, _MinMaxStatus, MinMax, ahk_id %MoveWindow_Id%
   if (_MinMaxStatus = 0) {
     SetTimer, MoveWindowWatch, 10
-    tooltip
-  } else {
-    tooltip 最大化窗口不支持移动
   }
 Return
