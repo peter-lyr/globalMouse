@@ -63,12 +63,16 @@ Return
 
 #if !IsRemoteDesktop
 ~RButton & LButton::
-  GoSub, MoveWindow
   GoSub, _Mark_LeftDown
+  if (RButtonPressCnt == 1) {
+    GoSub, MoveWindow
+  }
 Return
 
 #if !IsRemoteDesktop
 ~RButton & MButton::
   GoSub, _Mark_MButtonDown
-  GoSub, ResizeWindow
+  if (RButtonPressCnt == 1) {
+    GoSub, ResizeWindow
+  }
 Return
