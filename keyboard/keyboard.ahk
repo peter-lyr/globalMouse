@@ -15,8 +15,14 @@ Return
   }
 Return
 
-^#p::
+^#;::
   WinGet, SelectedWindow_Id, Id, A
   SelectedWindow(SelectedWindow_Id)
   GoSub, TransparencyToggle
+Return
+
+^#p::
+  WinGet, SelectedWindow_Id, Id, A
+  SelectedWindow(SelectedWindow_Id)
+  GoSub, TopMostToggle
 Return
