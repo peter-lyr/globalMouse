@@ -51,3 +51,22 @@ RestoreScript:
   tooltip, 已恢复全局右键 <Ctrl-Win-Alt-F12>暂停
   DllCall("SwapMouseButton", "uInt", true)
 Return
+
+RunWaitOne(command) {
+    shell := ComObjCreate("WScript.Shell")
+    ; 通过 cmd.exe 执行单条命令
+    exec := shell.Exec(ComSpec " /C " command)
+    ; 读取并返回命令的输出
+    return exec.StdOut.ReadAll()
+}
+
+GetSwapMouseButtons() {
+  cmd := "reg query ""HKEY_CURRENT_USER\Control Panel\Mouse"" /v SwapMouseButtons | findstr /ri ""SwapMouseButtons"""
+  ret := RunWaitOne(cmd)
+  ret := Trim(ret, " `n`r`t")
+  ret := SubStr(ret, 0, 1)
+  if (ret == "1") {
+    Return 1
+  }
+  Return 0
+}

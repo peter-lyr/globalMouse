@@ -9,7 +9,9 @@ GoSub, InitCircle
 GoSub, StartCheckMstsc
 GoSub, BatListInit
 
-Flag_SwapMouseButton := DllCall("SwapMouseButton")
+if (GetSwapMouseButtons() == 1) {
+  Flag_SwapMouseButton := DllCall("SwapMouseButton")
+}
 
 #Include %A_ScriptDir%\globalRButton\_countRButton.ahk
 #Include %A_ScriptDir%\globalRButton\_drawCircle.ahk
