@@ -41,13 +41,13 @@ SelectedWindow_IsExplorer() {
 
 StopScript:
   PauseFlag := 1
-  tooltip, 已暂停脚本 <Ctrl-Win-Alt-F12>/<RButton-MButton>恢复
+  tooltip, 已暂停全局右键 <Ctrl-Win-Alt-F12>/<RButton-MButton>恢复
   GoSub, HideCircle
   DllCall("SwapMouseButton", "uInt", false)
 Return
 
 RestoreScript:
   PauseFlag := 0
-  tooltip, 已恢复脚本 <Ctrl-Win-Alt-F12>暂停
+  tooltip, 已恢复全局右键 <Ctrl-Win-Alt-F12>暂停
   DllCall("SwapMouseButton", "uInt", true)
 Return

@@ -1,7 +1,7 @@
 SomeThingDone := 0
 PauseFlag := 0
 
-tooltip, 开/关脚本: <Ctrl-Win-Alt-F12>
+tooltip, 开/关全局右键: <Ctrl-Win-Alt-F12>
 SetTimer, _RemoveTooltip, -2200
 
 #Include %A_ScriptDir%\globalRButton\globalRButton.ahk
