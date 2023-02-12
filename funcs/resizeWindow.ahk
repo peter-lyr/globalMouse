@@ -1,5 +1,5 @@
 ResizeWindow:
-  ; CoordMode, Mouse
+  CoordMode, Mouse, Screen
   SetWinDelay, 2
   MouseGetPos, _MouseWindow_X1, _MouseWindow_Y1, _MouseWindowId
   WinGet, _MaxMaxStatus, MinMax, ahk_id %_MouseWindowId%

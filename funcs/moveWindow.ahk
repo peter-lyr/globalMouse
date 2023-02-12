@@ -11,7 +11,6 @@ MoveWindowWatch:
     WinMove, ahk_id %MoveWindow_Id%, , %MoveWindow_OriX%, %MoveWindow_OriY%
     return
   }
-  CoordMode, Mouse, Screen
   MouseGetPos, _X2, _Y2
   WinGetPos, _X, _Y, , , ahk_id %MoveWindow_Id%
   SetWinDelay, -1
