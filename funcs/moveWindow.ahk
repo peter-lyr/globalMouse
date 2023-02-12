@@ -3,12 +3,12 @@ MoveWindowWatch:
   GetKeyState, _LButtonStatus, LButton, P
   if (_LButtonStatus == "U") {
     SetTimer, MoveWindowWatch, Off
-    return
+    Return
   }
   if (Flag_RightUp == 1) {
     SetTimer, MoveWindowWatch, Off
     WinMove, ahk_id %MoveWindow_Id%, , %MoveWindow_OriX%, %MoveWindow_OriY%
-    return
+    Return
   }
   MouseGetPos, _X2, _Y2
   WinGetPos, _X, _Y, , , ahk_id %MoveWindow_Id%
@@ -16,7 +16,7 @@ MoveWindowWatch:
   WinMove, ahk_id %MoveWindow_Id%, , _X + _X2 - _X1, _Y + _Y2 - _Y1
   _X1 := _X2
   _Y1 := _Y2
-return
+Return
 
 MoveWindow:
   CoordMode, Mouse, Screen

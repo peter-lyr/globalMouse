@@ -57,7 +57,7 @@ RunWaitOne(command) {
     ; 通过 cmd.exe 执行单条命令
     exec := shell.Exec(ComSpec " /C " command)
     ; 读取并返回命令的输出
-    return exec.StdOut.ReadAll()
+    Return exec.StdOut.ReadAll()
 }
 
 GetSwapMouseButtons() {
