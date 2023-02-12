@@ -5,8 +5,7 @@ MoveWindowWatch:
     SetTimer, MoveWindowWatch, Off
     return
   }
-  GetKeyState, _NKeyState, N, P
-  if (_NKeyState == "D") {
+  if (Flag_RightUp == 1) {
     SetTimer, MoveWindowWatch, Off
     WinMove, ahk_id %MoveWindow_Id%, , %MoveWindow_OriX%, %MoveWindow_OriY%
     return

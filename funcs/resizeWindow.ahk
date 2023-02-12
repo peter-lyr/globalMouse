@@ -7,6 +7,7 @@ ResizeWindow:
     Return
   }
   WinGetPos, _X1, _Y1, _W, _H, ahk_id %_MouseWindowId%
+  WinGetPos, _XX1, _YY1, _WW, _HH, ahk_id %_MouseWindowId%
   _Y := _H * (_MouseWindow_X1 - _X1) / _W + _Y1
   __Y := _H * (_X1 - _MouseWindow_X1) / _W + _Y1 + _H
   if (_MouseWindow_X1 < _X1 + _W / 3 or ((_MouseWindow_Y1 > _Y) and (_MouseWindow_Y1 < __Y))) {
@@ -36,6 +37,10 @@ ResizeWindow:
     __Dy := 0
   }
   Loop {
+    if (Flag_RightUp == 1) {
+      WinMove, ahk_id %_MouseWindowId%, , _XX1, _YY1, _WW, _HH
+      Break
+    }
     GetKeyState, MButtonStatus, MBUTTON, P
     if (MButtonStatus == "U") {
       Break
