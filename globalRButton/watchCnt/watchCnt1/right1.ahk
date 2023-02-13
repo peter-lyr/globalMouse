@@ -17,10 +17,20 @@ Right1:
     ; SomeThingDone := 1
     ; Flag_WheelUp := 0
   } else {
-    msg := ""
-    if (Flag_RightUpCancel == 0) {
-      GoSub, AltTabMsg
+    GetKeyState, LButtonSta, LButton, P
+    GetKeyState, MButtonSta, MButton, P
+    if (MButtonSta == "U" and LButtonSta == "U") {
+      msg := ""
+      if (Flag_RightUpCancel == 0) {
+        GoSub, AltTabMsg
+      }
+      tooltip, %msg%
+    } else {
+      if (MButtonSta == "D") {
+        tooltip, 松开右键: 撤销窗口大小改变`n松开中键: 确定
+      } else if (LButtonSta == "D") {
+        tooltip, 松开右键: 撤销窗口移动`n松开左键键: 确定
+      }
     }
-    tooltip, %msg%
   }
 Return
