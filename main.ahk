@@ -16,21 +16,15 @@ SetTimer, _RemoveTooltip, -2200
 
 ; 全局右键
 #if !IsRemoteDesktop
+#if !PauseFlag
 RButton::
-  if (PauseFlag) {
-    Send, {RButton}
-    Return
-  }
   GoSub, GlobalRButton
 Return
 
 ; 全局右键 - 结束
 #if !IsRemoteDesktop
+#if !PauseFlag
 RButton Up::
-  if (PauseFlag) {
-    Send, {RButton Up}
-    Return
-  }
   GoSub, GlobalRButtonEnd
   GoSub, _Mark_RightUp
 Return
@@ -76,19 +70,13 @@ Return
 
 ; 全局右键 - 标记滚轮
 #if !IsRemoteDesktop
+#if !PauseFlag
 WheelUp::
-  if (PauseFlag) {
-    Send, {WheelUp}
-    Return
-  }
   GoSub, _Mark_WheelUp
 Return
 #if !IsRemoteDesktop
 WheelDown::
-  if (PauseFlag) {
-    Send, {WheelDown}
-    Return
-  }
+#if !PauseFlag
   GoSub, _Mark_WheelDown
 Return
 
