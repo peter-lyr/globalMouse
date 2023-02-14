@@ -74,17 +74,6 @@ RunWaitOne(command) {
     Return exec.StdOut.ReadAll()
 }
 
-GetSwapMouseButtons() {
-  cmd := "reg query ""HKEY_CURRENT_USER\Control Panel\Mouse"" /v SwapMouseButtons | findstr /ri ""SwapMouseButtons"""
-  ret := RunWaitOne(cmd)
-  ret := Trim(ret, " `n`r`t")
-  ret := SubStr(ret, 0, 1)
-  if (ret == "1") {
-    Return 1
-  }
-  Return 0
-}
-
 GetIni_MainMouseButton() {
   IniRead, value, globalMouse.ini, MainMouseButton, mode, 0
   Return value
