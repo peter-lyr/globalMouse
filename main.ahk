@@ -113,3 +113,8 @@ Return
   }
   SetTimer, _RemoveTooltip, -2200
 Return
+
+~F11::
+  ret := GetIni_MainMouseButton()
+  tooltip, %ret%
+Return

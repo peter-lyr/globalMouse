@@ -84,3 +84,28 @@ GetSwapMouseButtons() {
   }
   Return 0
 }
+
+GetIni_MainMouseButton() {
+  _Flag := 0
+  Loop, Read, globalMouse.ini
+  {
+    Loop, parse, A_LoopReadLine, =
+    {
+      if (A_LoopReadLine == "[MainMouseButton]") {
+        _Flag := 1
+        Break
+      }
+      if (_Flag > 0) {
+        if (_Flag == 2) {
+          if (A_LoopField == 1) {
+            Return 1
+          } else {
+            Return 0
+          }
+        }
+        _Flag += 1
+      }
+    }
+  }
+  Return 0
+}
