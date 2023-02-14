@@ -86,6 +86,6 @@ GetSwapMouseButtons() {
 }
 
 GetIni_MainMouseButton() {
-  IniRead, value, globalMouse.ini, MainMouseButton, mode
+  IniRead, value, globalMouse.ini, MainMouseButton, mode, 0
   Return value
 }

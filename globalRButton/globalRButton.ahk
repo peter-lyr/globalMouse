@@ -9,7 +9,7 @@ GoSub, InitCircle
 GoSub, StartCheckMstsc
 GoSub, BatListInit
 
-if (GetSwapMouseButtons() == 1) {
+if (GetIni_MainMouseButton() == 1) {
   Flag_SwapMouseButton := DllCall("SwapMouseButton")
 }
 
