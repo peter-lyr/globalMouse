@@ -47,7 +47,6 @@ GlobalRButton:
   GoSub, DrawCircle
   GoSub, CntGlobalRButton
   MouseGetPos, SelectedWindow_X, SelectedWindow_Y, SelectedWindow_Id
-  WinActivate, ahk_id %SelectedWindow_Id%
   SelectedWindow(SelectedWindow_Id)
   SetTimer, RButtonWatcher, 10
 Return
