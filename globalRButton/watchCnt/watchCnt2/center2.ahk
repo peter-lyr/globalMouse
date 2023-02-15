@@ -17,11 +17,11 @@ Center2:
   } else if (Flag_WheelDown == 1) {
     Flag_WheelDown := 0
     SomeThingDone := 1
-    GoSub, SendRightWheelDown
+    GoSub, SendLeftWheelUp
   } else if (Flag_WheelUp == 1) {
     Flag_WheelUp := 0
     SomeThingDone := 1
-    GoSub, SendLeftWheelUp
+    GoSub, SendRightWheelDown
   } else {
     msg := ""
     if (Flag_RightUpCancel == 0) {
