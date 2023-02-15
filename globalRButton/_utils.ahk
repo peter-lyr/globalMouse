@@ -79,3 +79,13 @@ GetIni_MainMouseButton() {
   IniRead, value, globalMouse.ini, MainMouseButton, mode, 0
   Return value
 }
+
+PushMsg(text) {
+  global msg
+  if (StrLen(text) > 0) {
+    if (StrLen(msg) > 0) {
+      msg .= "`n"
+    }
+    msg .= text
+  }
+}
