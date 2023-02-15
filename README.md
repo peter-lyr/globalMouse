@@ -6,3 +6,11 @@ Windows操作系统——全局鼠标右键，连续敲击鼠标右键1、2、3�
 
 - 拷贝globalMouse.exe和globalMouse.ini到相同目录下。
 - 作用：记住鼠标设置主按钮
+
+```ini
+[MainMouseButton]
+mode=0 ; 鼠标主按钮
+[Circle]
+size=90 ; 圆半径
+color=red ; 圆颜色
+```
