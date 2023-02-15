@@ -1,12 +1,12 @@
-#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\center2.ahk
-#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\down2.ahk
-#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\left2.ahk
-#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\leftdown2.ahk
-#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\leftup2.ahk
-#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\right2.ahk
-#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\rightdown2.ahk
-#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\rightup2.ahk
-#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\up2.ahk
+#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\_center2.ahk
+#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\_down2.ahk
+#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\_left2.ahk
+#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\_leftdown2.ahk
+#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\_leftup2.ahk
+#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\_right2.ahk
+#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\_rightdown2.ahk
+#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\_rightup2.ahk
+#Include %A_ScriptDir%\globalRButton\watchCnt\watchCnt2\_up2.ahk
 
 WatchCnt2:
   if (Direction == "Center") {
