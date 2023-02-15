@@ -2,8 +2,10 @@ RButtonPressCnt := 0
 _RButtonTimerOut := 12
 _RButtonTimerCnt := _RButtonTimerOut
 
-CircleSize := 90
-CircleColor := "Red"
+IniRead, CircleSize, globalMouse.ini, Circle, size, 90
+IniRead, CircleColor, globalMouse.ini, Circle, color, red
+IniWrite %CircleSize%, globalMouse.ini, Circle, size
+IniWrite %CircleColor%, globalMouse.ini, Circle, color
 
 GoSub, InitCircle
 GoSub, StartCheckMstsc
