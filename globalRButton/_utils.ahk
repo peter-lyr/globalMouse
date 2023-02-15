@@ -45,12 +45,13 @@ StopScript:
   PauseFlag := 1
   tooltip, 已暂停全局右键`n开全局右键: <Ctrl-Win-Alt-F12>或者<RButton-MButton>
   SetTimer, _RemoveTooltip, -2200
-  DllCall("SwapMouseButton", "uInt", false)
 Return
 
 RestoreScript:
   PauseFlag := 0
-  ; DllCall("SwapMouseButton", "uInt", true)
+  if (GetIni_MainMouseButton() == 1) {
+    Flag_SwapMouseButton := DllCall("SwapMouseButton")
+  }
   tooltip, 已恢复全局右键`n关全局右键: <Ctrl-Win-Alt-F12>或者三次单击右键后在圆圈中心单击中键
 Return
 

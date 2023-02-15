@@ -1,5 +1,4 @@
 SwapMouseButtonDo:
-  Flag_SwapMouseButton := DllCall("SwapMouseButton")
   Flag_SwapMouseButton := !Flag_SwapMouseButton
   DllCall("SwapMouseButton", Int, Flag_SwapMouseButton)
   if (Flag_SwapMouseButton) {
