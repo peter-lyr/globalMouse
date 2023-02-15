@@ -1,6 +1,7 @@
 LeftUp1:
   if (Flag_RightUp == 1) {
     if (Flag_RightUpCancel == 0) {
+      GoSub, ClickRight
     } else if (Flag_WheelUsed == 1) {
       tooltip
     }
@@ -20,6 +21,7 @@ LeftUp1:
     if (MButtonSta == "U" and LButtonSta == "U") {
       msg := ""
       if (Flag_RightUpCancel == 0) {
+        GoSub, ClickRightMsg
       }
       tooltip, %msg%
     } else {
