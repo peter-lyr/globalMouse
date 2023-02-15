@@ -18,11 +18,25 @@ if (GetIni_MainMouseButton() == 1) {
 #Include %A_ScriptDir%\globalRButton\_watchEvent.ahk
 #Include %A_ScriptDir%\globalRButton\_checkMsTsc.ahk
 
+SendRightClickWatcher:
+  if (_RButtonTimerCnt > _RButtonTimerOut) {
+    SetTimer, SendRightClickWatcher, Off
+    Click, Right
+  }
+Return
+
+SendRightClick:
+  if (SomeThingDone == 0 and Direction == "Center") {
+    SetTimer, SendRightClickWatcher, 10
+  }
+Return
+
 _RemoveTooltip:
   tooltip
 Return
 
 GlobalRButton:
+  SetTimer, SendRightClickWatcher, Off
   PathCopied := 0
   SomeThingDone := 0
   Flag_RButtonDown := 1
@@ -37,6 +51,7 @@ GlobalRButton:
 Return
 
 GlobalRButtonEnd:
+  GoSub, SendRightClick
   Flag_RButtonDown := 0
   SetTimer, DrawCircle1S, Off
   GoSub, HideCircle
