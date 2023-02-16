@@ -2,7 +2,6 @@ Left1:
   if (Flag_RightUp == 1) {
     if (Flag_RightUpCancel == 0) {
       MsgLeft1_RightUp(0)
-      GoSub, CtrlAltTab
     } else if (Flag_WheelUsed == 1) {
       tooltip
     }
@@ -33,7 +32,6 @@ Left1:
       GoSub, SendPgUpDnMsg
       if (Flag_RightUpCancel == 0) {
         MsgLeft1_RightUp(1)
-        GoSub, CtrlAltTabMsg
       }
       MsgLeft1_WheelDown(1)
       MsgLeft1_WheelUp(1)

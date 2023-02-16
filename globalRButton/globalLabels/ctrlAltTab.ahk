@@ -1,13 +1,10 @@
-CtrlAltTab:
-  Send, {Alt Down}{Ctrl Down}{Tab}
-  Send, {Alt Up}
-  Send, {Ctrl Up}
-  tooltip
-Return
-
-CtrlAltTabMsg:
-  if (StrLen(msg) > 0) {
-    msg .= "`n"
+CtrlAltTab(show) {
+  if (show == 0) {
+    Send, {Alt Down}{Ctrl Down}{Tab}
+    Send, {Alt Up}
+    Send, {Ctrl Up}
+    tooltip
+  } else {
+    PushMsg("松开右键: <Alt+Ctrl+TAb>")
   }
-  msg .= "松开右键: <Alt+Ctrl+TAb>"
-Return
+}

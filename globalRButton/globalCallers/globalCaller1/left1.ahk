@@ -1,4 +1,5 @@
 MsgLeft1_RightUp(show) {
+  CtrlAltTab(show)
 }
 
 MsgLeft1_LeftDown(show) {
