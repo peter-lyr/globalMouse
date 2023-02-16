@@ -24,5 +24,5 @@ Return
 ^#p::
   WinGet, SelectedWindow_Id, Id, A
   SelectedWindow(SelectedWindow_Id)
-  GoSub, TopMostToggle
+  TopMostToggle(0)
 Return
