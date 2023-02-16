@@ -1,6 +1,7 @@
 Left1:
   if (Flag_RightUp == 1) {
     if (Flag_RightUpCancel == 0) {
+      MsgLeft1_RightUp(0)
       GoSub, CtrlAltTab
     } else if (Flag_WheelUsed == 1) {
       tooltip
@@ -27,6 +28,7 @@ Left1:
       msg := ""
       GoSub, SendPgUpDnMsg
       if (Flag_RightUpCancel == 0) {
+        MsgLeft1_RightUp(1)
         GoSub, CtrlAltTabMsg
       }
       tooltip, %msg%

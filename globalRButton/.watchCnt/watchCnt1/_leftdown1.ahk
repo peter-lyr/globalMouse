@@ -1,6 +1,7 @@
 Leftdown1:
   if (Flag_RightUp == 1) {
     if (Flag_RightUpCancel == 0) {
+      MsgLeftdown1_RightUp(0)
       GoSub, ExplorerNavigateUp
     } else if (Flag_WheelUsed == 1) {
       tooltip
@@ -23,6 +24,7 @@ Leftdown1:
     if (MButtonSta == "U" and LButtonSta == "U") {
       msg := ""
       if (Flag_RightUpCancel == 0) {
+        MsgLeftdown1_RightUp(1)
         GoSub, ExplorerNavigateUpMsg
       }
       tooltip, %msg%

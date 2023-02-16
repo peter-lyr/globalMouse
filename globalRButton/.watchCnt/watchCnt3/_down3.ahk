@@ -1,6 +1,7 @@
 Down3:
   if (Flag_RightUp == 1) {
     if (Flag_RightUpCancel == 0) {
+      MsgDown3_RightUp(0)
     } else if (Flag_WheelUsed == 1) {
       tooltip
     }
@@ -17,6 +18,7 @@ Down3:
   } else {
     msg := ""
     if (Flag_RightUpCancel == 0) {
+      MsgDown3_RightUp(1)
     }
     tooltip, %msg%
   }

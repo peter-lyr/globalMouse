@@ -1,6 +1,7 @@
 Center2:
   if (Flag_RightUp == 1) {
     if (Flag_RightUpCancel == 0) {
+      MsgCenter2_RightUp(0)
     } else if (Flag_WheelUsed == 1) {
       tooltip
     }
@@ -25,6 +26,7 @@ Center2:
   } else {
     msg := ""
     if (Flag_RightUpCancel == 0) {
+      MsgCenter2_RightUp(1)
     }
     GoSub, CtrlCCopyMsg
     GoSub, WinVMsg

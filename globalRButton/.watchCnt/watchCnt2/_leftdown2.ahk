@@ -1,6 +1,7 @@
 Leftdown2:
   if (Flag_RightUp == 1) {
     if (Flag_RightUpCancel == 0) {
+      MsgLeftdown2_RightUp(0)
       GoSub, BatListRightUp
     } else if (Flag_WheelUsed == 1) {
       tooltip
@@ -22,6 +23,7 @@ Leftdown2:
   } else {
     msg := ""
     if (Flag_RightUpCancel == 0) {
+      MsgLeftdown2_RightUp(1)
     }
     GoSub, BatListMsg
     tooltip, %msg%

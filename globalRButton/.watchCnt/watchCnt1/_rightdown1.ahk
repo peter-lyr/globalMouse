@@ -1,6 +1,7 @@
 Rightdown1:
   if (Flag_RightUp == 1) {
     if (Flag_RightUpCancel == 0) {
+      MsgRightdown1_RightUp(0)
       GoSub, MinimizeWindow
     } else if (Flag_WheelUsed == 1) {
       tooltip
@@ -26,6 +27,7 @@ Rightdown1:
     if (MButtonSta == "U" and LButtonSta == "U") {
       msg := ""
       if (Flag_RightUpCancel == 0) {
+        MsgRightdown1_RightUp(1)
         GoSub, MinimizeWindowMsg
       }
       GoSub, CtrlWinLeftRightMsg
