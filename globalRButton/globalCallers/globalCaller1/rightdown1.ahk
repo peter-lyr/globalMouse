@@ -15,7 +15,9 @@ MsgRightDown1_MButtonUp(show) {
 }
 
 MsgRightDown1_WheelDown(show) {
+  CtrlWinRight(show)
 }
 
 MsgRightDown1_WheelUp(show) {
+  CtrlWinLeft(show)
 }

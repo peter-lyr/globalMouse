@@ -18,12 +18,10 @@ RightDown1:
     SomeThingDone := 1
     Flag_WheelDown := 0
     MsgRightDown1_WheelDown(0)
-    GoSub, CtrlWinRight
   } else if (Flag_WheelUp == 1) {
     SomeThingDone := 1
     Flag_WheelUp := 0
     MsgRightDown1_WheelUp(0)
-    GoSub, CtrlWinLeft
   } else {
     GetKeyState, LButtonSta, LButton, P
     GetKeyState, MButtonSta, MButton, P
@@ -34,7 +32,6 @@ RightDown1:
       }
       MsgRightDown1_WheelDown(1)
       MsgRightDown1_WheelUp(1)
-      GoSub, CtrlWinLeftRightMsg
       tooltip, %msg%
     } else {
       GoSub, LMButton
