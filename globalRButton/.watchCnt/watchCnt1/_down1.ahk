@@ -28,8 +28,8 @@ Down1:
       if (Flag_RightUpCancel == 0) {
         MsgDown1_RightUp(1)
       }
-      MsgDown1_WheelDown(1)
       MsgDown1_WheelUp(1)
+      MsgDown1_WheelDown(1)
       tooltip, %msg%
     } else {
       GoSub, LMButton
