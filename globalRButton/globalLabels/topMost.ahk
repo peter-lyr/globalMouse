@@ -1,8 +1,8 @@
 TopMostToggle(show) {
+  global SelectedWindow_Title
+  global SelectedWindow_Id
   if (show == 0) {
     if (SelectedWindow_IsDesktop() == 0) {
-      global SelectedWindow_Title
-      global SelectedWindow_Id
       WinGet, Status, ExStyle, ahk_id %SelectedWindow_Id%
       if (Status & 0x8) {
         Winset, AlwaysOnTop, Off, ahk_id %SelectedWindow_Id%
