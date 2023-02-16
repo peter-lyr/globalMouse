@@ -1,4 +1,5 @@
 MsgRightup1_RightUp(show) {
+  RestoreMaximizeWindow(show)
 }
 
 MsgRightup1_LeftDown(show) {
