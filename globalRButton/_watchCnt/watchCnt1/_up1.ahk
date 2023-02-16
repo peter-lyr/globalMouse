@@ -18,12 +18,10 @@ Up1:
     SomeThingDone := 1
     Flag_WheelDown := 0
     MsgUp1_WheelDown(0)
-    GoSub, VolumeDown
   } else if (Flag_WheelUp == 1) {
     SomeThingDone := 1
     Flag_WheelUp := 0
     MsgUp1_WheelUp(0)
-    GoSub, VolumeUp
   } else {
     GetKeyState, LButtonSta, LButton, P
     GetKeyState, MButtonSta, MButton, P
@@ -34,7 +32,6 @@ Up1:
       }
       MsgUp1_WheelDown(1)
       MsgUp1_WheelUp(1)
-      GoSub, VolumeMsg
       tooltip, %msg%
     } else {
       GoSub, LMButton

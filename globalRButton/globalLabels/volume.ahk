@@ -1,14 +1,17 @@
-VolumeUp:
-  Send, {Volume_Up}
-Return
-
-VolumeDown:
-  Send, {Volume_Down}
-Return
-
-VolumeMsg:
-  if (StrLen(msg) > 0) {
-    msg .= "`n"
+VolumeUp(show) {
+  if (show == 0) {
+    Send, {Volume_Up}
+  } else {
+    PushMsg("向上滚轮: 提高音量")
   }
-  msg .= "滚动滚轮: 改变音量"
+}
+Return
+
+VolumeDown(show) {
+  if (show == 0) {
+    Send, {Volume_Down}
+  } else {
+    PushMsg("向下滚轮: 降低音量")
+  }
+}
 Return

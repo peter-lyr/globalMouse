@@ -15,7 +15,9 @@ MsgUp1_MButtonUp(show) {
 }
 
 MsgUp1_WheelDown(show) {
+  VolumeDown(show)
 }
 
 MsgUp1_WheelUp(show) {
+  VolumeUp(show)
 }
