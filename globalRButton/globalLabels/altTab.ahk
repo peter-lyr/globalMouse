@@ -1,5 +1,4 @@
 AltTab(show) {
-  global msg
   if (show == 0) {
     Send, {Alt Down}{Tab}
     Send, {Alt Up}
