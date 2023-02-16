@@ -2,9 +2,6 @@ MsgRight1_RightUp(show) {
   AltTab(show)
 }
 
-MsgRight1_WheelUsed(show) {
-}
-
 MsgRight1_LeftDown(show) {
 }
 

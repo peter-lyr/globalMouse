@@ -2,9 +2,6 @@ MsgUp1_RightUp(show) {
   TopMostToggle(show)
 }
 
-MsgUp1_WheelUsed(show) {
-}
-
 MsgUp1_LeftDown(show) {
 }
 

@@ -1,9 +1,6 @@
 MsgCenter1_RightUp(show) {
 }
 
-MsgCenter1_WheelUsed(show) {
-}
-
 MsgCenter1_LeftDown(show) {
 }
 

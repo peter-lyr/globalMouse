@@ -1,9 +1,6 @@
 MsgRightup3_RightUp(show) {
 }
 
-MsgRightup3_WheelUsed(show) {
-}
-
 MsgRightup3_LeftDown(show) {
 }
 
