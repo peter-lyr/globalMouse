@@ -7,6 +7,7 @@
 #Include %A_ScriptDir%\globalRButton\.watchCnt\watchCnt1\_rightdown1.ahk
 #Include %A_ScriptDir%\globalRButton\.watchCnt\watchCnt1\_rightup1.ahk
 #Include %A_ScriptDir%\globalRButton\.watchCnt\watchCnt1\_up1.ahk
+#Include %A_ScriptDir%\globalRButton\.watchCnt\watchCnt1\_lmbutton.ahk
 
 WatchCnt1:
   if (Direction == "Center") {
