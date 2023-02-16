@@ -1,4 +1,5 @@
 MsgRightDown1_RightUp(show) {
+  MinimizeWindow(show)
 }
 
 MsgRightDown1_LeftDown(show) {

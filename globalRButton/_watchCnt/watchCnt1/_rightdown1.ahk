@@ -2,7 +2,6 @@ RightDown1:
   if (Flag_RightUp == 1) {
     if (Flag_RightUpCancel == 0) {
       MsgRightDown1_RightUp(0)
-      GoSub, MinimizeWindow
     } else if (Flag_WheelUsed == 1) {
       tooltip
     }
@@ -32,7 +31,6 @@ RightDown1:
       msg := ""
       if (Flag_RightUpCancel == 0) {
         MsgRightDown1_RightUp(1)
-        GoSub, MinimizeWindowMsg
       }
       MsgRightDown1_WheelDown(1)
       MsgRightDown1_WheelUp(1)
