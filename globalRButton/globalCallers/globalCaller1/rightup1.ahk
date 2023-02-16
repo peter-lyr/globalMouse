@@ -1,23 +1,23 @@
-MsgRightup1_RightUp(show) {
+MsgRightUp1_RightUp(show) {
   RestoreMaximizeWindow(show)
 }
 
-MsgRightup1_LeftDown(show) {
+MsgRightUp1_LeftDown(show) {
 }
 
-MsgRightup1_LeftUp(show) {
+MsgRightUp1_LeftUp(show) {
 }
 
-MsgRightup1_MButtonDown(show) {
+MsgRightUp1_MButtonDown(show) {
 }
 
-MsgRightup1_MButtonUp(show) {
+MsgRightUp1_MButtonUp(show) {
 }
 
-MsgRightup1_WheelDown(show) {
+MsgRightUp1_WheelDown(show) {
   ExplorerNavigateBackward(show)
 }
 
-MsgRightup1_WheelUp(show) {
+MsgRightUp1_WheelUp(show) {
   ExplorerNavigateForward(show)
 }

@@ -1,21 +1,21 @@
-MsgLeftdown1_RightUp(show) {
+MsgLeftDown1_RightUp(show) {
   ExplorerNavigateUp(show)
 }
 
-MsgLeftdown1_LeftDown(show) {
+MsgLeftDown1_LeftDown(show) {
 }
 
-MsgLeftdown1_LeftUp(show) {
+MsgLeftDown1_LeftUp(show) {
 }
 
-MsgLeftdown1_MButtonDown(show) {
+MsgLeftDown1_MButtonDown(show) {
 }
 
-MsgLeftdown1_MButtonUp(show) {
+MsgLeftDown1_MButtonUp(show) {
 }
 
-MsgLeftdown1_WheelDown(show) {
+MsgLeftDown1_WheelDown(show) {
 }
 
-MsgLeftdown1_WheelUp(show) {
+MsgLeftDown1_WheelUp(show) {
 }

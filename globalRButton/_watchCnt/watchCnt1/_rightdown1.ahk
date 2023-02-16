@@ -1,7 +1,7 @@
-Rightdown1:
+RightDown1:
   if (Flag_RightUp == 1) {
     if (Flag_RightUpCancel == 0) {
-      MsgRightdown1_RightUp(0)
+      MsgRightDown1_RightUp(0)
       GoSub, MinimizeWindow
     } else if (Flag_WheelUsed == 1) {
       tooltip
@@ -18,12 +18,12 @@ Rightdown1:
   } else if (Flag_WheelDown == 1) {
     SomeThingDone := 1
     Flag_WheelDown := 0
-    MsgRightdown1_WheelDown(0)
+    MsgRightDown1_WheelDown(0)
     GoSub, CtrlWinRight
   } else if (Flag_WheelUp == 1) {
     SomeThingDone := 1
     Flag_WheelUp := 0
-    MsgRightdown1_WheelUp(0)
+    MsgRightDown1_WheelUp(0)
     GoSub, CtrlWinLeft
   } else {
     GetKeyState, LButtonSta, LButton, P
@@ -31,11 +31,11 @@ Rightdown1:
     if (MButtonSta == "U" and LButtonSta == "U") {
       msg := ""
       if (Flag_RightUpCancel == 0) {
-        MsgRightdown1_RightUp(1)
+        MsgRightDown1_RightUp(1)
         GoSub, MinimizeWindowMsg
       }
-      MsgRightdown1_WheelDown(1)
-      MsgRightdown1_WheelUp(1)
+      MsgRightDown1_WheelDown(1)
+      MsgRightDown1_WheelUp(1)
       GoSub, CtrlWinLeftRightMsg
       tooltip, %msg%
     } else {

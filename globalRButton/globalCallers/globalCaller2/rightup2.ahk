@@ -1,20 +1,20 @@
-MsgRightup2_RightUp(show) {
+MsgRightUp2_RightUp(show) {
 }
 
-MsgRightup2_LeftDown(show) {
+MsgRightUp2_LeftDown(show) {
 }
 
-MsgRightup2_LeftUp(show) {
+MsgRightUp2_LeftUp(show) {
 }
 
-MsgRightup2_MButtonDown(show) {
+MsgRightUp2_MButtonDown(show) {
 }
 
-MsgRightup2_MButtonUp(show) {
+MsgRightUp2_MButtonUp(show) {
 }
 
-MsgRightup2_WheelDown(show) {
+MsgRightUp2_WheelDown(show) {
 }
 
-MsgRightup2_WheelUp(show) {
+MsgRightUp2_WheelUp(show) {
 }
