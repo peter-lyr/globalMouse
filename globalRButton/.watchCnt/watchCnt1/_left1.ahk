@@ -18,18 +18,15 @@ Left1:
     SomeThingDone := 1
     Flag_WheelDown := 0
     MsgLeft1_WheelDown(0)
-    GoSub, SendPgDnWheelDown
   } else if (Flag_WheelUp == 1) {
     SomeThingDone := 1
     Flag_WheelUp := 0
     MsgLeft1_WheelUp(0)
-    GoSub, SendPgUpWheelUp
   } else {
     GetKeyState, LButtonSta, LButton, P
     GetKeyState, MButtonSta, MButton, P
     if (MButtonSta == "U" and LButtonSta == "U") {
       msg := ""
-      GoSub, SendPgUpDnMsg
       if (Flag_RightUpCancel == 0) {
         MsgLeft1_RightUp(1)
       }

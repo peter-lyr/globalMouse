@@ -15,7 +15,9 @@ MsgLeft1_MButtonUp(show) {
 }
 
 MsgLeft1_WheelDown(show) {
+  SendPgDnWheelDown(show)
 }
 
 MsgLeft1_WheelUp(show) {
+  SendPgUpWheelUp(show)
 }

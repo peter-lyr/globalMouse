@@ -1,14 +1,15 @@
-SendPgUpWheelUp:
-  Send, {PgUp}
-Return
-
-SendPgDnWheelDown:
-  Send, {PgDn}
-Return
-
-SendPgUpDnMsg:
-  if (StrLen(msg) > 0) {
-    msg .= "`n"
+SendPgDnWheelDown(show) {
+  if (show == 0) {
+    Send, {PgDn}
+  } else {
+    PushMsg("向下滚轮: PgDn")
   }
-  msg .= "滚动滚轮: PgUp/Dn"
-Return
+}
+
+SendPgUpWheelUp(show) {
+  if (show == 0) {
+    Send, {PgUp}
+  } else {
+    PushMsg("向上滚轮: PgUp")
+  }
+}
