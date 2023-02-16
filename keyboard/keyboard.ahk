@@ -18,7 +18,7 @@ Return
 ^#;::
   WinGet, SelectedWindow_Id, Id, A
   SelectedWindow(SelectedWindow_Id)
-  GoSub, TransparencyToggle
+  TransparencyToggle(0)
 Return
 
 ^#p::
