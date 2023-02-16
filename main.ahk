@@ -17,10 +17,10 @@ SetTimer, _RemoveTooltip, -2200
 ; 全局右键
 #if !IsRemoteDesktop and !PauseFlag
 RButton::
-  Send, {LWin Uup}
-  Send, {Ctrl Uup}
-  Send, {Alt Uup}
-  Send, {Sifht Uup}
+  Send, {LWin Up}
+  Send, {Ctrl Up}
+  Send, {Alt Up}
+  Send, {Sifht Up}
   GoSub, GlobalRButton
 Return
 
