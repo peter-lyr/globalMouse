@@ -1,4 +1,5 @@
 MsgLeftUp1_RightUp(show) {
+  ClickRight(show)
 }
 
 MsgLeftUp1_LeftDown(show) {
