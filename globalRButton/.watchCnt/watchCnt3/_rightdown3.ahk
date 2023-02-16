@@ -8,10 +8,12 @@ Rightdown3:
   } else if (Flag_LeftDown == 1) {
     SomeThingDone := 1
     Flag_LeftDown := 0
+    MsgRightdown3_LeftDown(0)
   ; } else if (Flag_LeftUp == 1) {
   } else if (Flag_MButtonDown == 1) {
     SomeThingDone := 1
     Flag_MButtonDown := 0
+    MsgRightdown3_MButtonDown(0)
   ; } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
     SomeThingDone := 1
@@ -26,6 +28,8 @@ Rightdown3:
     if (Flag_RightUpCancel == 0) {
       MsgRightdown3_RightUp(1)
     }
+    MsgRightdown3_LeftDown(1)
+    MsgRightdown3_MButtonDown(1)
     MsgRightdown3_WheelDown(1)
     MsgRightdown3_WheelUp(1)
     tooltip, %msg%

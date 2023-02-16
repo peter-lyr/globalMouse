@@ -9,10 +9,12 @@ Rightdown2:
   } else if (Flag_LeftDown == 1) {
     SomeThingDone := 1
     Flag_LeftDown := 0
+    MsgRightdown2_LeftDown(0)
   ; } else if (Flag_LeftUp == 1) {
   } else if (Flag_MButtonDown == 1) {
     SomeThingDone := 1
     Flag_MButtonDown := 0
+    MsgRightdown2_MButtonDown(0)
   ; } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
     SomeThingDone := 1
@@ -28,6 +30,8 @@ Rightdown2:
       MsgRightdown2_RightUp(1)
       GoSub, SendEscMsg
     }
+    MsgRightdown2_LeftDown(1)
+    MsgRightdown2_MButtonDown(1)
     MsgRightdown2_WheelDown(1)
     MsgRightdown2_WheelUp(1)
     tooltip, %msg%
