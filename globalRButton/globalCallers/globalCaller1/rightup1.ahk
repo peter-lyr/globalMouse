@@ -14,7 +14,9 @@ MsgRightup1_MButtonUp(show) {
 }
 
 MsgRightup1_WheelDown(show) {
+  ExplorerNavigateBackward(show)
 }
 
 MsgRightup1_WheelUp(show) {
+  ExplorerNavigateForward(show)
 }

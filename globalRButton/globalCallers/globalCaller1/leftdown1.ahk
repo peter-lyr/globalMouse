@@ -1,4 +1,5 @@
 MsgLeftdown1_RightUp(show) {
+  ExplorerNavigateUp(show)
 }
 
 MsgLeftdown1_LeftDown(show) {
