@@ -1,16 +1,17 @@
-ShiftWheelUp:
-  Send, {Shift Down}{WheelUp}
-  Send, {Shift Up}
-Return
-
-ShiftWheelDown:
-  Send, {Shift Down}{WheelDown}
-  Send, {Shift Up}
-Return
-
-ShiftWheelMsg:
-  if (StrLen(msg) > 0) {
-    msg .= "`n"
+ShiftWheelUp(show) {
+  if (show == 0) {
+    Send, {Shift Down}{WheelUp}
+    Send, {Shift Up}
+  } else {
+    PushMsg("向上滚轮: <Whift-WheelUp>")
   }
-  msg .= "滚动滚轮: <Shift-WheelUp/Down>"
-Return
+}
+
+ShiftWheelDown(show) {
+  if (show == 0) {
+    Send, {Shift Down}{WheelDown}
+    Send, {Shift Up}
+  } else {
+    PushMsg("向下滚轮: <Whift-WheelDown>")
+  }
+}

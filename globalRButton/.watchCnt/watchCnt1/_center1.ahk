@@ -13,11 +13,11 @@ Center1:
   } else if (Flag_WheelDown == 1) {
     SomeThingDone := 1
     Flag_WheelDown := 0
-    GoSub, ShiftWheelDown
+    MsgCenter1_WheelDown(0)
   } else if (Flag_WheelUp == 1) {
     SomeThingDone := 1
     Flag_WheelUp := 0
-    GoSub, ShiftWheelUp
+    MsgCenter1_WheelUp(0)
   } else {
     GetKeyState, LButtonSta, LButton, P
     GetKeyState, MButtonSta, MButton, P
@@ -25,7 +25,8 @@ Center1:
       msg := SelectedWindow_ProcessName
       if (Flag_RightUpCancel == 0) {
       }
-      GoSub, ShiftWheelMsg
+      MsgCenter1_WheelUp(1)
+      MsgCenter1_WheelDown(1)
       tooltip, %msg%
     } else {
       GoSub, LMButton
