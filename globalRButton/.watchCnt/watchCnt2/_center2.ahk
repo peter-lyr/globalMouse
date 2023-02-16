@@ -17,10 +17,12 @@ Center2:
   ; } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
     Flag_WheelDown := 0
+    MsgCenter2_WheelDown(0)
     SomeThingDone := 1
     GoSub, SendLeftWheelUp
   } else if (Flag_WheelUp == 1) {
     Flag_WheelUp := 0
+    MsgCenter2_WheelUp(0)
     SomeThingDone := 1
     GoSub, SendRightWheelDown
   } else {
@@ -28,6 +30,8 @@ Center2:
     if (Flag_RightUpCancel == 0) {
       MsgCenter2_RightUp(1)
     }
+    MsgCenter2_WheelDown(1)
+    MsgCenter2_WheelUp(1)
     GoSub, CtrlCCopyMsg
     GoSub, WinVMsg
     GoSub, SendLeftRightMsg

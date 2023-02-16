@@ -13,11 +13,13 @@ Leftdown2:
   } else if (Flag_WheelDown == 1) {
     SomeThingDone := 1
     Flag_WheelDown := 0
+    MsgLeftdown2_WheelDown(0)
     GoSub, BatListWheelDown
     Flag_RightUpCancel := 0
   } else if (Flag_WheelUp == 1) {
     SomeThingDone := 1
     Flag_WheelUp := 0
+    MsgLeftdown2_WheelUp(0)
     GoSub, BatListWheelUp
     Flag_RightUpCancel := 0
   } else {
@@ -25,6 +27,8 @@ Leftdown2:
     if (Flag_RightUpCancel == 0) {
       MsgLeftdown2_RightUp(1)
     }
+    MsgLeftdown2_WheelDown(1)
+    MsgLeftdown2_WheelUp(1)
     GoSub, BatListMsg
     tooltip, %msg%
   }

@@ -12,10 +12,12 @@ Left2:
   ; } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
     Flag_WheelDown := 0
+    MsgLeft2_WheelDown(0)
     SomeThingDone := 1
     GoSub, SendPgDn40WheelDown
   } else if (Flag_WheelUp == 1) {
     Flag_WheelUp := 0
+    MsgLeft2_WheelUp(0)
     SomeThingDone := 1
     GoSub, SendPgUp40WheelUp
   } else {
@@ -24,6 +26,8 @@ Left2:
       MsgLeft2_RightUp(1)
       GoSub, WinTabMsg
     }
+    MsgLeft2_WheelDown(1)
+    MsgLeft2_WheelUp(1)
     GoSub, SendPgUpDn40Msg
     tooltip, %msg%
   }

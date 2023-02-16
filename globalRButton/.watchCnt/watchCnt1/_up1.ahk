@@ -15,10 +15,12 @@ Up1:
   } else if (Flag_WheelDown == 1) {
     SomeThingDone := 1
     Flag_WheelDown := 0
+    MsgUp1_WheelDown(0)
     GoSub, VolumeDown
   } else if (Flag_WheelUp == 1) {
     SomeThingDone := 1
     Flag_WheelUp := 0
+    MsgUp1_WheelUp(0)
     GoSub, VolumeUp
   } else {
     GetKeyState, LButtonSta, LButton, P
@@ -28,6 +30,8 @@ Up1:
       if (Flag_RightUpCancel == 0) {
         MsgUp1_RightUp(1)
       }
+      MsgUp1_WheelDown(1)
+      MsgUp1_WheelUp(1)
       GoSub, VolumeMsg
       tooltip, %msg%
     } else {

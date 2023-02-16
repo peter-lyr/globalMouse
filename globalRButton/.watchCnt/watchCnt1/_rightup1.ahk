@@ -16,10 +16,12 @@ Rightup1:
   } else if (Flag_WheelDown == 1) {
     SomeThingDone := 1
     Flag_WheelDown := 0
+    MsgRightup1_WheelDown(0)
     GoSub, ExplorerNavigateBackward
   } else if (Flag_WheelUp == 1) {
     SomeThingDone := 1
     Flag_WheelUp := 0
+    MsgRightup1_WheelUp(0)
     GoSub, ExplorerNavigateForward
   } else {
     GetKeyState, LButtonSta, LButton, P
@@ -30,6 +32,8 @@ Rightup1:
         MsgRightup1_RightUp(1)
         GoSub, RestoreMaximizeWindowMsg
       }
+      MsgRightup1_WheelDown(1)
+      MsgRightup1_WheelUp(1)
       GoSub, ExplorerNavigateForwardBackwardMsg
       tooltip, %msg%
     } else {

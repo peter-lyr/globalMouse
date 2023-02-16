@@ -16,10 +16,12 @@ Left1:
   } else if (Flag_WheelDown == 1) {
     SomeThingDone := 1
     Flag_WheelDown := 0
+    MsgLeft1_WheelDown(0)
     GoSub, SendPgDnWheelDown
   } else if (Flag_WheelUp == 1) {
     SomeThingDone := 1
     Flag_WheelUp := 0
+    MsgLeft1_WheelUp(0)
     GoSub, SendPgUpWheelUp
   } else {
     GetKeyState, LButtonSta, LButton, P
@@ -31,6 +33,8 @@ Left1:
         MsgLeft1_RightUp(1)
         GoSub, CtrlAltTabMsg
       }
+      MsgLeft1_WheelDown(1)
+      MsgLeft1_WheelUp(1)
       tooltip, %msg%
     } else {
       GoSub, LMButton
