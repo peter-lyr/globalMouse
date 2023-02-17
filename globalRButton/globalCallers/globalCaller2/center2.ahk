@@ -16,9 +16,9 @@ MsgCenter2_MButtonUp(show) {
 }
 
 MsgCenter2_WheelDown(show) {
-  SendLeftWheelUp(show)
+  SendRightWheelDown(show)
 }
 
 MsgCenter2_WheelUp(show) {
-  SendRightWheelDown(show)
+  SendLeftWheelUp(show)
 }

@@ -1,14 +1,15 @@
-SendUpWheelUp:
-  Send, {Up}
-Return
-
-SendDownWheelDown:
-  Send, {Down}
-Return
-
-SendUpDownMsg:
-  if (StrLen(msg) > 0) {
-    msg .= "`n"
+SendUpWheelUp(show) {
+  if (show == 0) {
+    Send, {Up}
+  } else {
+    PushMsg("向上滚轮: 上键")
   }
-  msg .= "滚动滚轮: 上下键"
-Return
+}
+
+SendDownWheelDown(show) {
+  if (show == 0) {
+    Send, {Down}
+  } else {
+    PushMsg("向下滚轮: 下键")
+  }
+}
