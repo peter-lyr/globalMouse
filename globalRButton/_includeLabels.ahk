@@ -21,3 +21,4 @@
 #Include %A_ScriptDir%\globalRButton\globalLabels\sendUpDown.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\clickRight.ahk
 #Include %A_ScriptDir%\globalRButton\globalLabels\explorer\navigate.ahk
+#Include %A_ScriptDir%\globalRButton\globalLabels\pause.ahk

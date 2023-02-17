@@ -14,7 +14,6 @@ Center3:
     SomeThingDone := 1
     Flag_MButtonDown := 0
     MsgCenter3_MButtonDown(0)
-    GoSub, StopScript
   ; } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
     SomeThingDone := 1
@@ -36,7 +35,6 @@ Center3:
     MsgCenter3_WheelDown(1)
     MsgCenter3_WheelUp(1)
     GoSub, SendUpDownMsg
-    GoSub, ScriptMsg
     tooltip, %msg%
   }
 Return

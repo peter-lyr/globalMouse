@@ -98,7 +98,7 @@ Return
 #if !IsRemoteDesktop
 ~RButton & MButton::
   if (PauseFlag) {
-    GoSub, RestoreScript
+    GoSub, RestoreGlobalMouse
     Return
   }
   GoSub, _Mark_MButtonDown
@@ -111,9 +111,9 @@ Return
 ~^#!f12::
   PauseFlag := !PauseFlag
   if (PauseFlag == 1) {
-    GoSub, StopScript
+    PauseGlobalMouse(0)
   } else {
-    GoSub, RestoreScript
+    GoSub, RestoreGlobalMouse
   }
   SetTimer, _RemoveTooltip, -2200
 Return

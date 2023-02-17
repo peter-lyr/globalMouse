@@ -8,6 +8,7 @@ MsgCenter3_LeftUp(show) {
 }
 
 MsgCenter3_MButtonDown(show) {
+  PauseGlobalMouse(show)
 }
 
 MsgCenter3_MButtonUp(show) {
