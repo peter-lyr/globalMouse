@@ -1,4 +1,5 @@
 MsgRightDown2_RightUp(show) {
+  SendEsc(show)
 }
 
 MsgRightDown2_LeftDown(show) {

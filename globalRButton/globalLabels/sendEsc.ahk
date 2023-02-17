@@ -1,10 +1,8 @@
-SendEsc:
-  Send, {Esc}
-Return
-
-SendEscMsg:
-  if (StrLen(msg) > 0) {
-    msg .= "`n"
+SendEsc(show) {
+  if (show == 0) {
+    Send, {Esc}
+    tooltip
+  } else {
+    PushMsg("松开右键: 发送Esc键")
   }
-  msg .= "松开右键: 发送Esc键"
-Return
+}
