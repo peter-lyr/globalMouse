@@ -14,7 +14,6 @@ Up3:
     SomeThingDone := 1
     Flag_MButtonDown := 0
     MsgUp3_MButtonDown(0)
-    GoSub, SwapMouseButtonDo
     Flag_RightUpCancel := 0
   ; } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
@@ -29,7 +28,6 @@ Up3:
     msg := ""
     if (Flag_RightUpCancel == 0) {
       MsgUp3_RightUp(1)
-      GoSub, SwapMouseButtonDoMsg
     }
     MsgUp3_LeftDown(1)
     MsgUp3_MButtonDown(1)

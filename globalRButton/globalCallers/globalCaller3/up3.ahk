@@ -8,6 +8,7 @@ MsgUp3_LeftUp(show) {
 }
 
 MsgUp3_MButtonDown(show) {
+  SwapMouseButtonDo(show)
 }
 
 MsgUp3_MButtonUp(show) {
