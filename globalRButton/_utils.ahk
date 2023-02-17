@@ -32,8 +32,18 @@ SelectedWindow(SelectedWindow_Id) {
 }
 
 SelectedWindow_IsExplorer() {
+  global CurWinTitle
   global SelectedWindow_ProcessName
   if (RegexMatch(SelectedWindow_ProcessName, "i)explorer\.exe") || RegexMatch(CurWinTitle, "i)Program Manager")) {
+    Return 1
+  }
+  Return 0
+}
+
+SelectedWindow_IsOnlyExplorer() {
+  global CurWinTitle
+  global SelectedWindow_ProcessName
+  if (StrLen(CurWinTitle) > 0 and RegexMatch(SelectedWindow_ProcessName, "i)explorer\.exe")) {
     Return 1
   }
   Return 0

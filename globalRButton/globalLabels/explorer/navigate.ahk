@@ -1,11 +1,11 @@
 ExplorerNavigateUp(show) {
   if (show == 0) {
-    if (SelectedWindow_IsExplorer()) {
+    if (SelectedWindow_IsOnlyExplorer()) {
       Send, {Alt Down}{Up}
       Send, {Alt Up}
     }
   } else {
-    if (SelectedWindow_IsExplorer()) {
+    if (SelectedWindow_IsOnlyExplorer()) {
       PushMsg("松开右键: 向上一级")
     }
   }
@@ -13,12 +13,12 @@ ExplorerNavigateUp(show) {
 
 ExplorerNavigateForward(show) {
   if (show == 0) {
-    if (SelectedWindow_IsExplorer()) {
+    if (SelectedWindow_IsOnlyExplorer()) {
       Send, {Alt Down}{Right}
       Send, {Alt Up}
     }
   } else {
-    if (SelectedWindow_IsExplorer()) {
+    if (SelectedWindow_IsOnlyExplorer()) {
       PushMsg("向上滚轮: 前进")
     }
   }
@@ -26,12 +26,12 @@ ExplorerNavigateForward(show) {
 
 ExplorerNavigateBackward(show) {
   if (show == 0) {
-    if (SelectedWindow_IsExplorer()) {
+    if (SelectedWindow_IsOnlyExplorer()) {
       Send, {Alt Down}{Left}
       Send, {Alt Up}
     }
   } else {
-    if (SelectedWindow_IsExplorer()) {
+    if (SelectedWindow_IsOnlyExplorer()) {
       PushMsg("向下滚轮: 后退")
     }
   }
