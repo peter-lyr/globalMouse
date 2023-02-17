@@ -1,12 +1,9 @@
-WinTab:
-  Send, {LWin Down}{Tab}
-  Send, {LWin Up}
-  tooltip
-Return
-
-WinTabMsg:
-  if (StrLen(msg) > 0) {
-    msg .= "`n"
+WinTab(show) {
+  if (show == 0) {
+    Send, {LWin Down}{Tab}
+    Send, {LWin Up}
+    tooltip
+  } else {
+    PushMsg("松开右键: <Win+TAb>")
   }
-  msg .= "松开右键: <Win+TAb>"
-Return
+}
