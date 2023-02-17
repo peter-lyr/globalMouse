@@ -1,14 +1,15 @@
-SendLeftWheelUp:
-  Send, {Left}
-Return
-
-SendRightWheelDown:
-  Send, {Right}
-Return
-
-SendLeftRightMsg:
-  if (StrLen(msg) > 0) {
-    msg .= "`n"
+SendLeftWheelUp(show) {
+  if (show == 0) {
+    Send, {Left}
+  } else {
+    PushMsg("向上滚轮: Left")
   }
-  msg .= "滚动滚轮: 左右键"
-Return
+}
+
+SendRightWheelDown(show) {
+  if (show == 0) {
+    Send, {Right}
+  } else {
+    PushMsg("向下滚轮: Right")
+  }
+}

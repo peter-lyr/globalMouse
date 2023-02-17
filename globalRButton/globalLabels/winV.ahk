@@ -1,12 +1,9 @@
-WinV:
-  Send, {LWin Down}v
-  Send, {LWin Up}
-  tooltip
-Return
-
-WinVMsg:
-  if (StrLen(msg) > 0) {
-    msg .= "`n"
+WinV(show) {
+  if (show == 0) {
+    Send, {LWin Down}v
+    Send, {LWin Up}
+    tooltip
+  } else {
+    PushMsg("单击中键: <Win-V>")
   }
-  msg .= "单击中键: <Win-V>"
-Return
+}

@@ -14,18 +14,15 @@ Center2:
     SomeThingDone := 1
     Flag_MButtonDown := 0
     MsgCenter2_MButtonDown(0)
-    GoSub, WinV
   ; } else if (Flag_MButtonUp == 1) {
   } else if (Flag_WheelDown == 1) {
     Flag_WheelDown := 0
-    MsgCenter2_WheelDown(0)
     SomeThingDone := 1
-    GoSub, SendLeftWheelUp
+    MsgCenter2_WheelDown(0)
   } else if (Flag_WheelUp == 1) {
     Flag_WheelUp := 0
-    MsgCenter2_WheelUp(0)
     SomeThingDone := 1
-    GoSub, SendRightWheelDown
+    MsgCenter2_WheelUp(0)
   } else {
     msg := ""
     if (Flag_RightUpCancel == 0) {
@@ -35,8 +32,6 @@ Center2:
     MsgCenter2_MButtonDown(1)
     MsgCenter2_WheelDown(1)
     MsgCenter2_WheelUp(1)
-    GoSub, WinVMsg
-    GoSub, SendLeftRightMsg
     tooltip, %msg%
   }
 Return
