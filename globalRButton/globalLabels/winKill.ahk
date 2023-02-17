@@ -1,17 +1,17 @@
-WinKill:
-  if (!SelectedWindow_IsDesktop()) {
-    WinKill, ahk_id %SelectedWindow_Id%
-  }
-Return
-
-WinKillMsg:
-  if (StrLen(msg) > 0) {
-    msg .= "`n"
-  }
-  if (!SelectedWindow_IsDesktop()) {
-    msg .= "松开右键: WinKill："
-    msg .= SelectedWindow_Title
+WinKillDo(show) {
+  global SelectedWindow_Id
+  global SelectedWindow_Title
+  if (show == 0) {
+    if (!SelectedWindow_IsDesktop()) {
+      WinKill, ahk_id %SelectedWindow_Id%
+    }
   } else {
-    msg .= "松开右键: 无法WinKill桌面"
+    if (!SelectedWindow_IsDesktop()) {
+      _Msg := "松开右键: WinKill："
+      _Msg .= SelectedWindow_Title
+    } else {
+      _Msg := "松开右键: 无法WinKill桌面"
+    }
+    PushMsg(_Msg)
   }
-Return
+}

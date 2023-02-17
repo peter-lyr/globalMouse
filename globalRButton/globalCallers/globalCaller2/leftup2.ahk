@@ -1,4 +1,5 @@
 MsgLeftUp2_RightUp(show) {
+  WinKillDo(show)
 }
 
 MsgLeftUp2_LeftDown(show) {

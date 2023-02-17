@@ -2,7 +2,6 @@ LeftUp2:
   if (Flag_RightUp == 1) {
     if (Flag_RightUpCancel == 0) {
       MsgLeftUp2_RightUp(0)
-      GoSub, WinKill
     } else if (Flag_WheelUsed == 1) {
       tooltip
     }
@@ -28,7 +27,6 @@ LeftUp2:
     msg := ""
     if (Flag_RightUpCancel == 0) {
       MsgLeftUp2_RightUp(1)
-      GoSub, WinKillMsg
     }
     MsgLeftUp2_LeftDown(1)
     MsgLeftUp2_MButtonDown(1)
