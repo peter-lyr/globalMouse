@@ -1,12 +1,10 @@
 BatListInit:
   BatList := []
-  BatIndex := 0
+  BatIndex := 1
   Loop, Files, *.bat, R
   {
     BatList.Push(A_LoopFileFullPath)
-    BatIndex := BatIndex + 1
   }
-  BatIndex := BatIndex * 1000
 Return
 
 RunBat(FilePath) {
@@ -31,22 +29,60 @@ RunBat(FilePath) {
   }
 }
 
-BatListRightUp:
-  _BatPath := A_WorkingDir "\" BatList[1 + BatIndex - (BatIndex // BatList.Length()) * BatList.Length()]
-  RunBat(_BatPath)
-Return
-
-BatListWheelUp:
-  BatIndex -= 1
-Return
-
-BatListWheelDown:
-  BatIndex += 1
-Return
-
-BatListMsg:
-  if (StrLen(msg) > 0) {
-    msg .= "`n"
+BatListRightUp(show) {
+  global BatList
+  global BatIndex
+  if (show == 0) {
+    _BatPath := A_WorkingDir "\" BatList[BatIndex]
+    RunBat(_BatPath)
+    tooltip
+  } else {
+    if (BatIndex > 0 and BatIndex < BatList.Length() + 1) {
+      _Msg := "松开右键: 运行命令"
+      _Msg .= " (1/"
+      _Msg .= BatList.Length()
+      _Msg .= ")"
+      PushMsg(_Msg)
+    } else {
+      PushMsg("松开右键:")
+    }
   }
-  msg .= GetListMsg(BatList, 1 + BatIndex - (BatIndex // BatList.Length()) * BatList.Length())
-Return
+}
+
+BatListWheelDown(show) {
+  global BatList
+  global BatIndex
+  if (show == 0) {
+    if (BatIndex < BatList.Length()) {
+      BatIndex += 1
+    } else {
+      BatIndex := BatList.Length() + 1
+    }
+  }
+}
+
+BatListWheelUp(show) {
+  global BatList
+  global BatIndex
+  if (show == 0) {
+    if (BatIndex >= 1) {
+      BatIndex -= 1
+    } else {
+      BatIndex = 0
+    }
+  } else {
+    _Msg := ""
+    if (BatIndex == 0) {
+      _Msg .= "----> `n"
+    } else {
+      _Msg .= "          `n"
+    }
+    _Msg .= GetListMsg(BatList, BatIndex)
+    if (BatIndex == BatList.Length() + 1) {
+      _Msg .= "----> "
+    } else {
+      _Msg .= "          "
+    }
+    PushMsg(_Msg)
+  }
+}

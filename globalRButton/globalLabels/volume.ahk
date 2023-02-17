@@ -5,7 +5,6 @@ VolumeUp(show) {
     PushMsg("向上滚轮: 提高音量")
   }
 }
-Return
 
 VolumeDown(show) {
   if (show == 0) {
@@ -14,4 +13,3 @@ VolumeDown(show) {
     PushMsg("向下滚轮: 降低音量")
   }
 }
-Return

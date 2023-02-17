@@ -7,7 +7,6 @@ CtrlWinRight(show) {
     PushMsg("向下滚轮: 切换下一个虚拟桌面")
   }
 }
-Return
 
 CtrlWinLeft(show) {
   if (show == 0) {
@@ -18,4 +17,3 @@ CtrlWinLeft(show) {
     PushMsg("向上滚轮: 切换上一个虚拟桌面")
   }
 }
-Return
