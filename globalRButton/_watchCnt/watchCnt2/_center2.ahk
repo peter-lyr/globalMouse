@@ -9,7 +9,6 @@ Center2:
     SomeThingDone := 1
     Flag_LeftDown := 0
     MsgCenter2_LeftDown(0)
-    GoSub, CtrlCCopy
   ; } else if (Flag_LeftUp == 1) {
   } else if (Flag_MButtonDown == 1) {
     SomeThingDone := 1
@@ -36,7 +35,6 @@ Center2:
     MsgCenter2_MButtonDown(1)
     MsgCenter2_WheelDown(1)
     MsgCenter2_WheelUp(1)
-    GoSub, CtrlCCopyMsg
     GoSub, WinVMsg
     GoSub, SendLeftRightMsg
     tooltip, %msg%

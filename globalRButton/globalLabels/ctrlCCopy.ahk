@@ -24,19 +24,17 @@ ClipboardWatcher:
   }
 Return
 
-CtrlCCopy:
-  Send {Ctrl Down}c
-  Send {Ctrl Up}
-  SetTimer, ClipboardWatcher, 10
-Return
-
-CtrlCCopyMsg:
-  if (StrLen(msg) > 0) {
-    msg .= "`n"
-  }
-  if (PathCopied == 0) {
-    msg .= "单击左键: <Ctrl-C>复制"
+CtrlCCopy(show) {
+  global PathCopied
+  if (show == 0) {
+    Send {Ctrl Down}c
+    Send {Ctrl Up}
+    SetTimer, ClipboardWatcher, 10
   } else {
-    msg .= PathCopied
+    if (PathCopied == 0) {
+      PushMsg("单击左键: <Ctrl-C>复制")
+    } else {
+      PushMsg(PathCopied)
+    }
   }
-Return
+}

@@ -2,6 +2,7 @@ MsgCenter2_RightUp(show) {
 }
 
 MsgCenter2_LeftDown(show) {
+  CtrlCCopy(show)
 }
 
 MsgCenter2_LeftUp(show) {
