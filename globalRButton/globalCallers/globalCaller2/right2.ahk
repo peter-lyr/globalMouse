@@ -1,5 +1,5 @@
 MsgRight2_RightUp(show) {
-  AltTab(show)
+  SendEnter(show)
 }
 
 MsgRight2_LeftDown(show) {
