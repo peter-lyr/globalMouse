@@ -1,5 +1,6 @@
 SomeThingDone := 0
 PauseFlag := 0
+Flag_RButtonDown := 0
 
 tooltip, 开/关全局右键: <Ctrl-Win-Alt-F12>`n关全局右键: 三次单击右键后在圆圈中心单击中键
 SetTimer, _RemoveTooltip, -2200
