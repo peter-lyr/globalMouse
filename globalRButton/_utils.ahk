@@ -49,14 +49,6 @@ SelectedWindow_IsOnlyExplorer() {
   Return 0
 }
 
-RunWaitOne(command) {
-    shell := ComObjCreate("WScript.Shell")
-    ; 通过 cmd.exe 执行单条命令
-    exec := shell.Exec(ComSpec " /C " command)
-    ; 读取并返回命令的输出
-    Return exec.StdOut.ReadAll()
-}
-
 GetIni_MainMouseButton() {
   IniRead, value, globalMouse.ini, MainMouseButton, mode, 0
   Return value
